@@ -9,7 +9,7 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col justify-center items-center p-8 pt-20 relative overflow-hidden" // Added pt-24 for top padding
+      className="min-h-screen flex flex-col justify-center items-center p-8 pt-1 relative overflow-hidden" // Added pt-24 for top padding
     >
       <motion.h1
         initial={{ y: -50, opacity: 0 }}

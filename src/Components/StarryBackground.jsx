@@ -63,7 +63,7 @@ const StarryBackground = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-0"
-      style={{ background: 'linear-gradient(to bottom, #0f0c29, #302b63, #24243e)' }}
+      style={{ background: 'linear-gradient(to bottom, #000000,rgb(19, 19, 29),rgb(23, 26, 39))' }}
     />
   );
 };

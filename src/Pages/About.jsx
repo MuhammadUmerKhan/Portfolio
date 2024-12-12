@@ -66,7 +66,7 @@ const About = () => {
     <div className="min-h-screen bg-gray-900 flex flex-col">
       <StarryBackground />
       <div className="flex-grow">
-        <div className="max-w-8xl mx-auto text-gray-300 relative z-10 p-8 pt-24">
+        <div className="max-w-8xl mx-auto text-gray-300 relative z-10 p-8 pt-1">
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

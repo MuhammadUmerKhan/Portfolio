@@ -31,7 +31,7 @@ const Footer = () => {
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-lg z-10"
+      className="bg-black bg-opacity-90 backdrop-blur-md shadow-lg z-10"
     >
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
@@ -42,7 +42,7 @@ const Footer = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
+                className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -75,3 +75,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

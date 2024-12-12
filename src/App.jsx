@@ -21,7 +21,7 @@ function App() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gray-900">
+      <div className="flex items-center justify-center h-screen bg-black">
         <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-600"></div>
       </div>
     );
@@ -29,10 +29,10 @@ function App() {
 
   return (
     <Router>
-      <div className="relative min-h-screen flex flex-col bg-gray-900 text-white">
+      <div className="relative min-h-screen flex flex-col bg-black text-white">
         <StarryBackground />
         <Header />
-        <main className="flex-grow z-10 pt-15">
+        <main className="flex-grow z-10 pt-20"> {/* Adjusted top padding */}
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -50,3 +50,4 @@ function App() {
 }
 
 export default App;
+
