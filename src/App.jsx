@@ -29,10 +29,10 @@ function App() {
 
   return (
     <Router>
-      <div className="relative min-h-screen flex flex-col bg-black text-white">
+      <div className="relative min-h-screen flex flex-col bg-transparent text-white">
         <StarryBackground />
         <Header />
-        <main className="flex-grow z-10 pt-20"> {/* Adjusted top padding */}
+        <main className="flex-grow z-10 pt-15 relative">
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />

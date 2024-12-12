@@ -8,7 +8,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col justify-center items-center p-8 pt-1" // Added pt-24 for top padding
+      className="min-h-screen flex flex-col justify-center items-center p-8 pt-15"
     >
       <div className="max-w-4xl w-full">
         <motion.h1
@@ -17,14 +17,14 @@ const Contact = () => {
           transition={{ delay: 0.2 }}
           className="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-12"
         >
-          Contact Me 💬
+          Contact Me 📬
         </motion.h1>
         
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-2xl mb-8 backdrop-blur-md"
+          className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-8 backdrop-blur-md"
         >
           {/* <h2 className="text-4xl font-bold text-white mb-6">Get in Touch 📞</h2> */}
           <div className="space-y-6">
@@ -79,3 +79,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

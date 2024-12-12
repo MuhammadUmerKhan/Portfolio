@@ -42,7 +42,7 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen p-8 pt-1 flex flex-col items-center" // Added pt-24 for top padding
+      className="min-h-screen p-8 pt-20 flex flex-col items-center"
     >
       <motion.h1
         initial={{ y: -50, opacity: 0 }}
@@ -67,7 +67,7 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 backdrop-blur-md"
+              className="bg-gray-800 bg-opacity-30 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 backdrop-blur-md"
             >
               <img
                 src={project.imageUrl}
@@ -118,3 +118,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

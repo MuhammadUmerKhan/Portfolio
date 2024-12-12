@@ -63,10 +63,10 @@ const About = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col">
+    <div className="min-h-screen bg-transparent flex flex-col">
       <StarryBackground />
       <div className="flex-grow">
-        <div className="max-w-8xl mx-auto text-gray-300 relative z-10 p-8 pt-1">
+        <div className="max-w-8xl mx-auto text-gray-300 relative z-10 p-8 pt-20">
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -82,7 +82,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
           >
             <div className="flex flex-col md:flex-row items-center mb-8">
               <motion.img
@@ -147,7 +147,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
           >
             <h2 className="text-3xl font-semibold mb-6 text-purple-400">🎓 Education</h2>
             {/* Changed to a two-column grid */}
@@ -187,7 +187,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
           >
             <h2 className="text-3xl font-semibold mb-6 text-purple-400">💻 Skills</h2>
             <div className="space-y-4">
@@ -221,11 +221,10 @@ const About = () => {
 
           {/* Certificates section */}
           <motion.div
-            // initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-md"
           >
             <h2 className="text-3xl font-semibold mb-6 text-purple-400">🏆 Certificates</h2>
             <div className="flex flex-wrap justify-center gap-4">
@@ -249,7 +248,7 @@ const About = () => {
             initial="hidden"
             animate={getInTouchInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-2xl backdrop-blur-md"
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl backdrop-blur-md"
           >
             <h2 className="text-3xl font-semibold mb-6 text-purple-400"><center>📬 Get In Touch</center> </h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
