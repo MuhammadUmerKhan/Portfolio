@@ -64,7 +64,7 @@ const About = () => {
   };
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col">
-      {/* <StarryBackground /> */}
+      <StarryBackground />
       <div className="flex-grow">
         <div className="max-w-8xl mx-auto text-gray-300 relative z-10 p-8 pt-24">
           <motion.h1
