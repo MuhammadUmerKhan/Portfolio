@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { FaDownload, FaLinkedin, FaGithub } from "react-icons/fa";
-import StarryBackground from '../Components/StarryBackground';
+
 
 const About = () => {
   const skills = [
@@ -64,9 +64,8 @@ const About = () => {
   };
   return (
     <div className="min-h-screen bg-transparent flex flex-col">
-      <StarryBackground />
       <div className="flex-grow">
-        <div className="max-w-8xl mx-auto text-gray-300 relative z-10 p-8 pt-20">
+        <div className="max-w-8xl mx-auto text-gray-300 relative p-8 pt-20">
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
