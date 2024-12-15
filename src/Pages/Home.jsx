@@ -17,7 +17,7 @@ const Home = () => {
         transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
         className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-6 z-10"
       >
-        Welcome to My Portfolio 🎉
+        Hi👋, I'm Muhammad Umer
       </motion.h1>
       
       <motion.p
@@ -26,7 +26,8 @@ const Home = () => {
         transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
         className="text-xl text-gray-300 mb-12 text-center max-w-2xl z-10"
       >
-        Hello! I'm <span className="font-semibold text-white">Muhammad Umer Khan</span> 👨‍💻, an aspiring Data Scientist passionate about transforming raw data into actionable insights 📊. I excel at solving complex problems with innovative and precise solutions 💡.
+        <span className="font-semibold text-white">Aspiring AI Engineer passionate about creating intelligent solutions and transforming data into innovation 🤖🚀.</span>
+        {/* Hello! I'm <span className="font-semibold text-white">Muhammad Umer Khan</span> 👨‍💻, an aspiring Data Scientist passionate about transforming raw data into actionable insights 📊. I excel at solving complex problems with innovative and precise solutions 💡. */}
       </motion.p>
 
       <motion.div

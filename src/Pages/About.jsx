@@ -92,22 +92,23 @@ const About = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
               />
               <div>
-                <h2 className="text-3xl font-semibold mb-4 text-left">👤 Profile</h2>
-                <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
-                  Hello! I am Muhammad Umer Khan, an aspiring Data Scientist driven by a passion for transforming data into actionable insights. Currently, I am pursuing a B.Sc. in Computer Science while gaining practical experience through hands-on projects and internships.
-                </p>
-                <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
-                  My expertise lies in <strong>Data Analysis</strong>, <strong>Machine Learning</strong>, and <strong>Natural Language Processing (NLP)</strong>. With a solid foundation in <strong>Python</strong>, <strong>SQL</strong>, and data visualization, I thrive on exploring innovative technologies and solving complex problems with creative solutions.
-                </p>
-              </div> 
+                  <h2 className="text-3xl font-semibold mb-4 text-left">👤 Profile</h2>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
+                      Hello! I am Muhammad Umer Khan, an aspiring AI Engineer passionate about designing intelligent systems that transform data into impactful solutions. Currently, I am pursuing a B.Sc. in Computer Science while gaining practical experience through hands-on projects and internships.
+                  </p>
+                  <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
+                      My expertise spans <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing (NLP)</strong>. With a strong foundation in <strong>Python</strong>, <strong>SQL</strong>, and AI frameworks, I thrive on exploring cutting-edge technologies and solving complex problems creatively.
+                  </p>
+              </div>
+
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { 
-                  title: "📂 Domains", 
-                  content: "Retail Analytics, E-commerce Personalization, HR Analytics, Customer Segmentation, NLP Applications" 
-                },
+                // { 
+                //   title: "📂 Domains", 
+                //   content: "Retail Analytics, E-commerce Personalization, HR Analytics, Customer Segmentation, NLP Applications" 
+                // },
                 { 
                   title: "🗣️ Languages", 
                   content: "English (Professional), Urdu (Native)" 
@@ -116,10 +117,10 @@ const About = () => {
                   title: "📊 Visualization Tools", 
                   content: "Microsoft Power BI, Matplotlib, Seaborn" 
                 },
-                // { 
-                //   title: "🛠️ Technical Skills", 
-                //   content: "Python, SQL, Scikit-learn, Tensorflow, Pandas, NumPy, SpaCy, NLTK" 
-                // },
+                {
+                  title: "🛠️ Technical Skills",
+                  content: "Python, SQL, Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, SpaCy, NLTK ..."
+                },                
                 { 
                   title: "🌱 Interests", 
                   content: "Fitness Enthusiast 🏋️‍♂️, Exploring New Technologies 💡, Machine Learning 🤖, Web Development 🌐" 
