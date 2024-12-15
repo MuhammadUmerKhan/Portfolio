@@ -84,7 +84,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-6 rounded-full shadow-md font-semibold"
+                    className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-2 px-6 rounded-full shadow-md font-semibold"
                     whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -105,7 +105,7 @@ const Projects = () => {
         >
           <motion.button
             onClick={toggleShowMore}
-            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-8 rounded-full shadow-md font-semibold"
+            className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-2 px-8 rounded-full shadow-md font-semibold"
             whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
             whileTap={{ scale: 0.95 }}
           >
