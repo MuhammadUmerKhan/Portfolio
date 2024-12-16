@@ -254,7 +254,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <motion.a
                 href="https://drive.google.com/uc?export=download&id=1xlcoTGBqWtqoGk-GF2jERWe_pF-yprhI"
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-lg flex items-center justify-center"
+                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-lg flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 variants={itemVariants}
