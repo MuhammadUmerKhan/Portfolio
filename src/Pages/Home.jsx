@@ -15,7 +15,7 @@ const Home = () => {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-        className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 mb-6 z-10"
+        className="text-6xl font-extrabold bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 mb-6 z-10"
       >
         Hi👋, I'm Muhammad Umer
       </motion.h1>
