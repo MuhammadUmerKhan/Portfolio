@@ -97,7 +97,7 @@ const About = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
               />
               <div>
-                  <h2 className="text-3xl font-semibold mb-4 text-left">👤 Profile</h2>
+                  <h2 className="text-3xl font-semibold mb-4 text-left">🧑 Profile</h2>
                   <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
                       Hello! I am Muhammad Umer Khan, an aspiring AI Engineer passionate about designing intelligent systems that transform data into impactful solutions. Currently, I am pursuing a B.Sc. in Computer Science while gaining practical experience through hands-on projects and internships.
                   </p>
