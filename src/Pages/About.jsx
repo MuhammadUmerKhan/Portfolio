@@ -76,7 +76,7 @@ const About = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
               About Me
             </span>
-            <span className="ml-2">🧑‍🎓</span>
+            <span className="ml-2">🎓</span>
           </motion.h1>
 
 
