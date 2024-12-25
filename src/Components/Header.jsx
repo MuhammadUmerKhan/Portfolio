@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RiHome4Line, RiUser3Line, RiProjectorLine, RiMailSendLine, RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { FaTools } from 'react-icons/fa';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +12,7 @@ const Header = () => {
   const navItems = [
     { name: 'Home', path: '/', icon: RiHome4Line },
     { name: 'About', path: '/about', icon: RiUser3Line },
+    { name: 'Skills', path: '/skills', icon: FaTools },
     { name: 'Projects', path: '/projects', icon: RiProjectorLine },
     { name: 'Contact', path: '/contact', icon: RiMailSendLine },
   ];
@@ -113,3 +115,4 @@ const Header = () => {
 };
 
 export default Header;
+

@@ -11,12 +11,12 @@ const Contact = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen flex flex-col justify-center items-center p-8 pt-15"
     >
-      <div className="max-w-4xl w-full">
+      <div className="max-w-5xl w-full">
       <motion.h1
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="text-5xl font-extrabold text-center mb-12 flex items-center justify-center"
+          className="text-6xl font-extrabold text-center mb-12 flex items-center justify-center"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
             Contact Me
@@ -28,7 +28,7 @@ const Contact = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-8 backdrop-blur-md"
+          className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-8" // backdrop-blur-md
         >
           {/* <h2 className="text-4xl font-bold text-white mb-6">Get in Touch 📞</h2> */}
           <div className="space-y-6">

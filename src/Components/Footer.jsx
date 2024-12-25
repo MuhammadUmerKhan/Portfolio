@@ -31,7 +31,7 @@ const Footer = () => {
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="bg-black bg-opacity-90 backdrop-blur-md shadow-lg z-10"
+      className="bg-black bg-opacity-70 shadow-lg z-10" // backdrop-blur-md
     >
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">

@@ -61,7 +61,7 @@ const Projects = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full"
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl w-full"
       >
         <AnimatePresence>
           {visibleProjects.map((project, index) => (
@@ -71,7 +71,7 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-800 bg-opacity-30 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 backdrop-blur-md"
+              className="bg-gray-800 bg-opacity-30 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 " // backdrop-blur-md
             >
               <img
                 src={project.imageUrl}
