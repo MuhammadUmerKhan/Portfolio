@@ -126,6 +126,42 @@ const Skills = () => {
             </div>
           </motion.div>
 
+          {/* Technical Skills section */}
+          <motion.div
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: false, amount: 0.3 }}
+                      variants={containerVariants}
+                      className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-sm"
+                    >
+                      <h2 className="text-3xl font-semibold mb-6 text-purple-400">💻 Technical Skills</h2>
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {[
+                          { name: "Python", emoji: "🐍" },
+                          { name: "SQL", emoji: "🗄️" },
+                          { name: "Scikit-learn", emoji: "🤖" },
+                          { name: "TensorFlow", emoji: "🧠" },
+                          { name: "PyTorch", emoji: "🔥" },
+                          { name: "Pandas", emoji: "🐼" },
+                          { name: "NumPy", emoji: "🔢" },
+                          { name: "SpaCy", emoji: "📚" },
+                          { name: "NLTK", emoji: "🗣️" },
+                          { name: "Power BI", emoji: "📊" },
+                          { name: "Matplotlib", emoji: "📈" },
+                          { name: "Seaborn", emoji: "🌊" },
+                        ].map((skill, index) => (
+                          <motion.div
+                            key={index}
+                            variants={itemVariants}
+                            className="bg-gray-700 bg-opacity-50 p-4 rounded-lg shadow-md flex items-center space-x-2"
+                          >
+                            <span className="text-2xl">{skill.emoji}</span>
+                            <span className="text-gray-300">{skill.name}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+
           {/* Certificates section */}
           <motion.div
             whileInView="visible"
@@ -158,11 +194,12 @@ const Skills = () => {
                       variants={containerVariants}
                     //   className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl backdrop-blur-md"
                     >
-          <div className="text-center my-8">
-            <p className="text-xl italic text-gray-400">
-              "The best of people are those that bring the most benefit to the rest of mankind." - Prophet Muhammad (ﷺ)
-            </p>
-          </div></motion.div>
+            <div className="text-center my-8">
+              <p className="text-xl italic text-gray-400">
+                "The best of people are those that bring the most benefit to the rest of mankind." - Prophet Muhammad (ﷺ)
+              </p>
+            </div>
+          </motion.div>
           
         </div>
       </div>
@@ -171,3 +208,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
