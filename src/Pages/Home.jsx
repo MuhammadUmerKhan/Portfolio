@@ -9,13 +9,13 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col justify-center items-center p-8 pt-20 relative overflow-hidden" // Added pt-24 for top padding
+      className="min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 md:p-8 pt-20 relative overflow-hidden" 
     >
       <motion.h1
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-        className="text-6xl font-extrabold mb-6 z-10 flex items-center"
+        className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 z-10 flex flex-col sm:flex-row items-center text-center sm:text-left"
       >
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
           Hi
@@ -33,14 +33,13 @@ const Home = () => {
         className="text-xl text-gray-300 mb-12 text-center max-w-2xl z-10"
       >
         <span className="font-semibold text-white">Aspiring AI Engineer passionate about creating intelligent solutions and transforming data into innovation 🤖🚀.</span>
-        {/* Hello! I'm <span className="font-semibold text-white">Muhammad Umer Khan</span> 👨‍💻, an aspiring Data Scientist passionate about transforming raw data into actionable insights 📊. I excel at solving complex problems with innovative and precise solutions 💡. */}
       </motion.p>
 
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.6, type: "spring", stiffness: 260, damping: 20 }}
-        className="w-64 h-64 rounded-full overflow-hidden shadow-2xl mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10"
+        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-8 sm:mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10"
       >
         <img
           src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/porfolio.jpg"
@@ -53,7 +52,7 @@ const Home = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.8, type: "spring" }}
-        className="flex flex-col sm:flex-row gap-4 z-10"
+        className="flex flex-col sm:flex-row gap-4 z-10 w-full sm:w-auto"
       >
         <Link
           to="/projects"
@@ -74,7 +73,7 @@ const Home = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.8, type: "spring" }}
-        className="flex justify-center space-x-8 mt-12 z-10"
+        className="flex justify-center space-x-4 sm:space-x-8 mt-8 sm:mt-12 z-10"
       >
         {[
           { icon: FaLinkedin, href: "https://www.linkedin.com/in/muhammad-umer-khan-61729b260/", color: "text-blue-400",},
@@ -92,7 +91,6 @@ const Home = () => {
             whileTap={{ scale: 0.9 }}
           >
             <social.icon size={36} />
-            <span className="text-xl">{social.emoji}</span>
           </motion.a>
         ))}
       </motion.div>

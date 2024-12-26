@@ -23,7 +23,7 @@ function App() {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-black">
-        <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-600"></div>
+        <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-blue-600 sm:w-20 sm:h-20 md:w-24 md:h-24"></div>
       </div>
     );
   }
@@ -33,7 +33,7 @@ function App() {
       <div className="relative min-h-screen flex flex-col bg-transparent text-white">
         <StarryBackground />
         <Header />
-        <main className="flex-grow z-10 pt-15 relative">
+        <main className="flex-grow z-10 pt-16 sm:pt-20 md:pt-3 relative">
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<Home />} />

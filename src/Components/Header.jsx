@@ -40,8 +40,8 @@ const Header = () => {
         scrolled ? 'bg-black bg-opacity-70 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-center w-full">
+      <nav className="container mx-auto px-4 sm:px-6 py-2 sm:py-4">
+        <div className="flex items-center justify-left w-full">
           {/* Centered Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-8 w-full">
             {navItems.map((item) => (
@@ -68,7 +68,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
+              className="text-white focus:outline-none p-2"
             >
               {isOpen ? <RiCloseLine size={28} /> : <RiMenu3Line size={28} />}
             </button>
@@ -83,7 +83,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="md:hidden mt-4"
+              className="md:hidden mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg"
             >
               {navItems.map((item, index) => (
                 <motion.div
@@ -94,7 +94,7 @@ const Header = () => {
                 >
                   <Link
                     to={item.path}
-                    className={`block py-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 ${
+                    className={`block py-3 px-4 text-base sm:text-lg text-gray-300 hover:text-purple-400 transition-colors duration-300 ${
                       location.pathname === item.path ? 'text-purple-400' : ''
                     }`}
                     onClick={() => setIsOpen(false)}
