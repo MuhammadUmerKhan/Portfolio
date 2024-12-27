@@ -43,13 +43,13 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen p-8 pt-20 flex flex-col items-center"
+      className="min-h-screen p-8 pt-16 flex flex-col items-center"
     >
       <motion.h1
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="text-6xl font-extrabold text-center mb-12 flex items-center justify-center"
+        className="text-6xl font-extrabold text-center mb-4 flex items-center justify-center"
       >
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
           My Projects

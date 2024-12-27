@@ -28,7 +28,7 @@ const About = () => {
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl font-extrabold text-center mb-12 flex items-center justify-center"
+            className="text-5xl font-extrabold text-center mb-5 flex items-center justify-center"
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
               About Me
@@ -42,7 +42,7 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 " // backdrop-blur-md
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5" // backdrop-blur-md
           >
             <div className="flex flex-col md:flex-row items-center mb-8">
               <motion.img

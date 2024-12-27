@@ -9,7 +9,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col justify-center items-center p-8 pt-15"
+      className="min-h-screen flex flex-col justify-center items-center p-8 pt-0"
     >
       <div className="max-w-5xl w-full">
       <motion.h1

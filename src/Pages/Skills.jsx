@@ -81,12 +81,12 @@ const Skills = () => {
   return (
     <div className="min-h-screen bg-transparent flex flex-col">
       <div className="flex-grow">
-        <div className="max-w-8xl mx-auto text-gray-300 relative p-8 pt-20">
+        <div className="max-w-8xl mx-auto text-gray-300 relative p-8 pt-16">
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl font-extrabold text-center mb-12 flex items-center justify-center"
+            className="text-5xl font-extrabold text-center mb-5 flex items-center justify-center"
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
               Skills
@@ -100,7 +100,7 @@ const Skills = () => {
             initial="visible"
             animate={skillsControls}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 " // backdrop-blur-md
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5" // backdrop-blur-md
           >
             <div className="space-y-4">
               {skills.map((skill, index) => (
@@ -132,7 +132,7 @@ const Skills = () => {
                       whileInView="visible"
                       viewport={{ once: false, amount: 0.3 }}
                       variants={containerVariants}
-                      className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 backdrop-blur-sm"
+                      className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5"
                     >
                       <h2 className="text-3xl font-semibold mb-6 text-purple-400">💻 Technical Skills</h2>
                       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -167,7 +167,7 @@ const Skills = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 " // backdrop-blur-md
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-10 " // backdrop-blur-md
           >
             <h2 className="text-3xl font-semibold mb-6 text-purple-400">🏆 Certificates</h2>
             <div className="flex flex-wrap justify-center gap-4">
