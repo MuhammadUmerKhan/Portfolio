@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RiToolsFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   const projectData = [
@@ -8,25 +9,29 @@ const Projects = () => {
       title: "Customer Churn Prediction with NLP Insights 📉",
       description: "A predictive model to identify customers at risk of churning by leveraging insights from customer feedback and interactions. Using NLP techniques, this project analyzes sentiment and extracts key themes to enhance predictive accuracy and provide actionable insights for reducing churn rates. Deployed with Streamlit for easy access to predictions and insights.",
       imageUrl: "https://www.voxco.com/wp-content/uploads/2021/09/Everything-you-need-to-know-about-Customer-Churn1.jpg",
-      link: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/"
+      liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights"
     },
     {
       title: "NLP-Powered Recommendation System 📚",
       description: "Developed a recommendation system that helps users discover relevant learning resources in Earth Systems, Climate Science, and Environmental Engineering. Using advanced natural language processing and collaborative filtering techniques, it analyzes course metadata and user preferences to deliver personalized suggestions. This comprehensive solution integrates multiple recommendation methods for an enhanced learning experience.",
       imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
-      link: "https://nlp-powered-recommendation-system.streamlit.app/"
+      liveLink: "https://nlp-powered-recommendation-system.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System"
     },
     {
       title: "ARIMA Time Series Forecasting 📈",
       description: "This project leverages the power of Streamlit to create an interactive web application for time series analysis. Users can easily upload their data, visualize trends, test for stationarity, and fit ARIMA models. The app offers valuable insights into time series data and facilitates accurate forecasting, making it a powerful tool.",
       imageUrl: "https://dataaspirant.com/wp-content/uploads/2023/09/1-14.png",
-      link: "https://yahoo-stock-arima-time-series-forecasting.streamlit.app/"
+      liveLink: "https://yahoo-stock-arima-time-series-forecasting.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Yahoo-Stock"
     },
     {
-      title: " Loan Approval Prediction System 💳",
+      title: "Loan Approval Prediction System 💳",
       description: "The Loan Approval Prediction System is an end-to-end machine learning project that predicts the approval status of loan applications. This project highlights expertise in data preprocessing, exploratory data analysis (EDA), feature engineering, and model building with an Artificial Neural Network (ANN). It includes an interactive Streamlit application that enables users to input loan details and receive real-time predictions.",
       imageUrl: "https://lendingplate.com/blog/wp-content/uploads/2023/08/Instant-Loan-Approval.png",
-      link: "https://customer-loan-approval.streamlit.app/"
+      liveLink: "https://customer-loan-approval.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Loan-Approval-KAGGLE-COMPETITION"
     }
   ];
 
@@ -61,7 +66,7 @@ const Projects = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl w-full"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl w-full"
       >
         <AnimatePresence>
           {visibleProjects.map((project, index) => (
@@ -79,20 +84,31 @@ const Projects = () => {
                 className="w-full h-56 object-cover"
               />
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-white mb-3">
+                <h2 className="text-2xl font-bold text-white mb-2">
                   {project.title}
                 </h2>
                 <p className="text-gray-300 mb-4">{project.description}</p>
-                <div className="flex justify-center">
+                <div className="flex justify-center space-x-4">
                   <motion.a
-                    href={project.link}
+                    href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-2 px-6 rounded-full shadow-md font-semibold"
+                    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-full shadow-md font-semibold"
                     whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    View Project 🔗
+                    View Live Demo 🚀
+                  </motion.a>
+                  <motion.a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 px-4 rounded-full shadow-md font-semibold flex items-center justify-center"
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(147, 51, 234, 0.5)" }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub className="mr-2" />
+                    View Efforts
                   </motion.a>
                 </div>
               </div>
@@ -105,11 +121,11 @@ const Projects = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="mt-8"
+          className="mt-5"
         >
           <motion.button
             onClick={toggleShowMore}
-            className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-2 px-8 rounded-full shadow-md font-semibold"
+            className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-2 px-5 rounded-full shadow-md font-semibold"
             whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
             whileTap={{ scale: 0.95 }}
           >
