@@ -1,3 +1,8 @@
 #root {
   text-align: center;
 }
+
+body, #root {
+  color: #C0C0C0; /* This is a silver light color */
+}
+

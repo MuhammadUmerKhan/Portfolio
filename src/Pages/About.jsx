@@ -58,7 +58,7 @@ const About = () => {
                   Hello! I am Muhammad Umer Khan, an aspiring AI Engineer passionate about designing intelligent systems that transform data into impactful solutions. Currently, I am pursuing a B.Sc. in Computer Science while gaining practical experience through hands-on projects and internships.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
-                  My expertise spans <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing (NLP)</strong>. With a strong foundation in <strong>Python</strong>, <strong>SQL</strong>, and AI frameworks, I thrive on exploring cutting-edge technologies and solving complex problems creatively.
+                  My expertise spans <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing (NLP)</strong>. With a strong foundation in <strong>Python</strong>, <strong>SQL</strong>, and <strong>AI frameworks</strong>, I thrive on exploring cutting-edge technologies and solving complex problems creatively.
                 </p>
               </div>
             </div>
