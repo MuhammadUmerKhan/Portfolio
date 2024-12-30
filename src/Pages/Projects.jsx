@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "🌱 Plant Disease Detection System 🌿",
       description: "The Potato Plant Disease Detection System is a deep learning-based application designed to identify plant diseases from leaf images. This project aims to empower farmers and gardeners with an accessible, user-friendly tool to diagnose crop health issues quickly and effectively, potentially improving agricultural productivity and reducing losses.",
-      imageUrl: "https://www.agrivi.com/wp-content/uploads/2021/05/Crop-Diseases-The-Nightmare-of-Every-Farmer.jpeg",
+      imageUrl: "https://plantura.garden/uk/wp-content/uploads/sites/2/2021/10/potato-diseases-1024x683.jpg",
       liveLink: "https://plant-leaf-desease-classification.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/Plant-Desease-Classification-Project/blob/main/README.md"
     },
