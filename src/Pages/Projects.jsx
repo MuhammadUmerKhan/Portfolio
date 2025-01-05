@@ -6,11 +6,11 @@ import { FaGithub } from "react-icons/fa";
 const Projects = () => {
   const projectData = [
     {
-      title: "🌱 Plant Disease Detection System 🌿",
-      description: "The Plant Disease Detection System is a deep learning-based application designed to identify plant diseases from leaf images. This project aims to empower farmers and gardeners with an accessible, user-friendly tool to diagnose crop health issues quickly and effectively, potentially improving agricultural productivity and reducing losses.",
-      imageUrl: "https://miro.medium.com/v2/resize:fit:700/1*CUjbLtX-FeWfT6D06ebziA.jpeg",
-      liveLink: "https://plant-leaf-desease-classification.streamlit.app/",
-      githubLink: "https://github.com/MuhammadUmerKhan/Plant-Desease-Classification-Project/blob/main/README.md"
+      title: "🦠 Pneumonia Classification System 🫁",
+      description: "The Pneumonia Classification System is a deep learning-based application designed to detect pneumonia from chest X-ray images. Leveraging transfer learning with InceptionV3, this project ensures accurate and reliable classification of NORMAL and PNEUMONIA cases. By augmenting data and addressing class imbalance. This tool aims to support healthcare professionals in early disease detection, improving patient outcomes and streamlining diagnostic processes.",
+      imageUrl: "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
+      liveLink: "https://pneumonia-vs-normal-detection.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md"
     },
     {
       title: "NLP-Powered Recommendation System 📚",
@@ -18,6 +18,13 @@ const Projects = () => {
       imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
       liveLink: "https://nlp-powered-recommendation-system.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System"
+    },
+    {
+      title: "🌱 Plant Disease Detection System 🌿",
+      description: "The Plant Disease Detection System is a deep learning-based application designed to identify plant diseases from leaf images. This project aims to empower farmers and gardeners with an accessible, user-friendly tool to diagnose crop health issues quickly and effectively, potentially improving agricultural productivity and reducing losses.",
+      imageUrl: "https://miro.medium.com/v2/resize:fit:700/1*CUjbLtX-FeWfT6D06ebziA.jpeg",
+      liveLink: "https://plant-leaf-desease-classification.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Plant-Desease-Classification-Project/blob/main/README.md"
     },
     {
       title: "Customer Churn Prediction with NLP Insights 📉",
