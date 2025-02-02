@@ -13,6 +13,13 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md"
     },
     {
+      title: "💼 AI Powered Resume Parser 💼",
+      description: "This project is an AI-driven Resume Parsing and Job Matching System that leverages Natural Language Processing (NLP) and Machine Learning to evaluate candidate suitability for job roles. It extracts, cleans, and processes resume text using advanced text preprocessing techniques and computes semantic similarity between resumes and job descriptions using SBERT embeddings & Cosine Similarity.",
+      imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*itALTnsKMBIE8mq5rzXzFg.jpeg",
+      liveLink: "https://ai-powered-resume-parser.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/-AI-Powered-Resume-Parser---Job-Matcher"
+    },
+    {
       title: "NLP-Powered Recommendation System 📚",
       description: "Developed a recommendation system that helps users discover relevant learning resources in Earth Systems, Climate Science, and Environmental Engineering. Using advanced natural language processing and collaborative filtering techniques, it analyzes course metadata and user preferences to deliver personalized suggestions. This comprehensive solution integrates multiple recommendation methods for an enhanced learning experience.",
       imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
