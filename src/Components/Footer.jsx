@@ -1,6 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
+import { motion } from "framer-motion"
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaFileAlt } from "react-icons/fa"
 
 const Footer = () => {
   const socialLinks = [
@@ -24,7 +23,13 @@ const Footer = () => {
       href: "https://www.facebook.com/umar.shahid.56211497",
       label: "Facebook",
     },
-  ];
+    {
+      icon: FaFileAlt,
+      href: "https://drive.google.com/uc?export=download&id=1bonnXDkLxQ-O-Vu_dFhb1J04TlSvkiiY",
+      label: "Resume",
+      download: true,
+    },
+  ]
 
   return (
     <motion.footer
@@ -48,6 +53,7 @@ const Footer = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
+                download={link.download}
               >
                 <span className="sr-only">{link.label}</span>
                 <link.icon className="h-6 w-6" />
@@ -61,8 +67,8 @@ const Footer = () => {
             transition={{ delay: 0.4 }}
           >
             <p>
-              &copy; {new Date().getFullYear()} Muhammad Umer Khan. All rights
-              reserved <span className="text-red-500">&hearts;</span>
+              &copy; {new Date().getFullYear()} Muhammad Umer Khan. All rights reserved{" "}
+              <span className="text-red-500">&hearts;</span>
             </p>
             {/* <p className="mt-2">
               Built with <span className="text-red-500">&hearts;</span> using React
@@ -71,8 +77,8 @@ const Footer = () => {
         </div>
       </div>
     </motion.footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
 
