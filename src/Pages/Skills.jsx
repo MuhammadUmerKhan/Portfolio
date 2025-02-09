@@ -4,14 +4,16 @@ import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
   const skills = [
-    { name: "Statistical Analysis 📐", percentage: 75 },
-    { name: "Python 🐍", percentage: 85 },
-    { name: "Data Visualization 📉", percentage: 80 },
-    { name: "Machine Learning 🤖", percentage: 70 },
-    { name: "Deep Learning 🖧", percentage: 65 },
-    { name: "Natural Language Processing (NLP) 🗣️", percentage: 75 },
-    { name: "SQL 🗄️", percentage: 80 },
+    { name: "Machine Learning 🤖", percentage: 80 },
+    { name: "Deep Learning 🖧", percentage: 75 },
+    { name: "Natural Language Processing (NLP) 🗣️", percentage: 85 },
+    { name: "Computer Vision 📸", percentage: 70 },
+    { name: "Tiny Object Detection 🛰️", percentage: 65 },
+    { name: "Time Series Forecasting ⏳", percentage: 70 },
+    { name: "Generative AI 🧠", percentage: 60 },
+    { name: "Recommendation Systems 🎯", percentage: 75 },
   ];
+
 
   const certificates = [
     { title: "Deep Learning Specialization", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Deep%20Learning%20Specialization.png" },
@@ -148,16 +150,29 @@ const Skills = () => {
                         {[
                           { name: "Python", emoji: "🐍" },
                           { name: "SQL", emoji: "🗄️" },
-                          { name: "Scikit-learn", emoji: "🤖" },
                           { name: "TensorFlow", emoji: "🧠" },
                           { name: "PyTorch", emoji: "🔥" },
-                          { name: "Pandas", emoji: "🐼" },
-                          { name: "NumPy", emoji: "🔢" },
-                          { name: "SpaCy", emoji: "📚" },
-                          { name: "NLTK", emoji: "🗣️" },
+                          { name: "Scikit-learn", emoji: "⚙️" },
+                          { name: "Hugging Face", emoji: "🤗" },
+                          { name: "LangChain", emoji: "🔗" },
+                          // { name: "Statistical Analysis", emoji: "📐" },
+                          // { name: "Data Visualization", emoji: "📉" },
+                          { name: "Feature Engineering", emoji: "🏗️" },
                           { name: "Power BI", emoji: "📊" },
-                          { name: "Matplotlib", emoji: "📈" },
-                          { name: "Seaborn", emoji: "🌊" },
+                          // { name: "Matplotlib", emoji: "📈" },
+                          // { name: "Seaborn", emoji: "🌊" },
+                          // { name: "Pandas", emoji: "🐼" },
+                          // { name: "NumPy", emoji: "🔢" },
+                          { name: "AWS", emoji: "☁️" },
+                          // { name: "Google Colab", emoji: "🚀" },
+                          // { name: "Hugging Face Spaces", emoji: "🏡" },
+                          { name: "Streamlit", emoji: "🌐" },
+                          // { name: "SBERT", emoji: "🏆" },
+                          // { name: "SpaCy", emoji: "📚" },
+                          // { name: "NLTK", emoji: "🗣️" },
+                          // { name: "FAISS", emoji: "🔍" },
+                          // { name: "BART", emoji: "📝" },
+                          { name: "Transformers", emoji: "🤖" },
                         ].map((skill, index) => (
                           <motion.div
                             key={index}
