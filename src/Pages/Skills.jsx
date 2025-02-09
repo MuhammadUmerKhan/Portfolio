@@ -8,10 +8,10 @@ const Skills = () => {
     { name: "Deep Learning 🖧", percentage: 75 },
     { name: "Natural Language Processing (NLP) 🗣️", percentage: 85 },
     { name: "Computer Vision 📸", percentage: 70 },
-    { name: "Tiny Object Detection 🛰️", percentage: 65 },
-    { name: "Time Series Forecasting ⏳", percentage: 70 },
+    // { name: "Tiny Object Detection 🛰️", percentage: 65 },
+    // { name: "Time Series Forecasting ⏳", percentage: 70 },
     { name: "Generative AI 🧠", percentage: 60 },
-    { name: "Recommendation Systems 🎯", percentage: 75 },
+    // { name: "Recommendation Systems 🎯", percentage: 75 },
   ];
 
 
