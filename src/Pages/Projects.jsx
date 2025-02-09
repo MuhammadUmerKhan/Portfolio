@@ -6,6 +6,13 @@ import { FaGithub } from "react-icons/fa";
 const Projects = () => {
   const projectData = [
     {
+      title: "📝 DocuMind AI: Smart PDF Question Answering System",
+      description: "In today's data-driven world, extracting meaningful insights from documents is crucial for businesses, researchers, and individuals. This project focuses on building an intelligent PDF question-answering system that leverages state-of-the-art language models to provide accurate, context-aware answers from uploaded PDF documents. 📚✨",
+      imageUrl: "https://blog.apify.com/content/images/size/w1200/2023/11/Extract-PDF-documents-for-question-answering-from-a-PDF-1.png",
+      liveLink: "https://github.com/MuhammadUmerKhan/PDF-Question-and-Answering-System/blob/main/README.md",
+      githubLink: "https://github.com/MuhammadUmerKhan/PDF-Question-and-Answering-System/blob/main/README.md"
+    },
+    {
       title: "🦠 Pneumonia Classification System 🫁",
       description: "The Pneumonia Classification System is a deep learning-based application designed to detect pneumonia from chest X-ray images. Leveraging transfer learning with InceptionV3, this project ensures accurate and reliable classification of NORMAL and PNEUMONIA cases. By augmenting data and addressing class imbalance. This tool aims to support healthcare professionals in early disease detection, improving patient outcomes and streamlining diagnostic processes.",
       imageUrl: "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
