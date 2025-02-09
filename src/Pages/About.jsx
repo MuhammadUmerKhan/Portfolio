@@ -155,7 +155,6 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
-            // className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl " // backdrop-blur-md
           >
             <h2 className="text-3xl font-semibold mb-6 text-purple-400"><center>📬 Get In Touch</center></h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
