@@ -9,7 +9,7 @@ const Projects = () => {
       title: "📝 DocuMind AI: Smart PDF Question Answering System",
       description: "In today's data-driven world, extracting meaningful insights from documents is crucial for businesses, researchers, and individuals. This project focuses on building an intelligent PDF question-answering system that leverages state-of-the-art language models to provide accurate, context-aware answers from uploaded PDF documents. 📚✨",
       imageUrl: "https://blog.apify.com/content/images/size/w1200/2023/11/Extract-PDF-documents-for-question-answering-from-a-PDF-1.png",
-      liveLink: "https://github.com/MuhammadUmerKhan/PDF-Question-and-Answering-System/blob/main/README.md",
+      liveLink: "",
       githubLink: "https://github.com/MuhammadUmerKhan/PDF-Question-and-Answering-System/blob/main/README.md"
     },
     {
@@ -18,6 +18,13 @@ const Projects = () => {
       imageUrl: "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
       liveLink: "https://pneumonia-vs-normal-detection.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md"
+    },
+    {
+      title: "📝 Multilingual Text Translation & Summarization System",
+      description: "In today's interconnected world, seamless communication across languages is crucial. This project provides a Multilingual Text Translation & Summarization System that allows users to translate text between multiple languages and summarize content efficiently.",
+      imageUrl: "https://618media.com/wp-content/uploads/2024/02/claude-ai-s-language-translation-capabilities.webp",
+      liveLink: "",
+      githubLink: "https://github.com/MuhammadUmerKhan/Multilingual-Text-Translation---Summarization-System/tree/main"
     },
     {
       title: "💼 AI Powered Resume Parser 💼",
