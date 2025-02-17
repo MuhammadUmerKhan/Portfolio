@@ -6,11 +6,11 @@ import { FaGithub } from "react-icons/fa";
 const Projects = () => {
   const projectData = [
     {
-      title: "📝 DocuMind AI: Smart PDF Question Answering System",
-      description: "In today's data-driven world, extracting meaningful insights from documents is crucial for businesses, researchers, and individuals. This project focuses on building an intelligent PDF question-answering system that leverages state-of-the-art language models to provide accurate, context-aware answers from uploaded PDF documents. 📚✨",
-      imageUrl: "https://blog.apify.com/content/images/size/w1200/2023/11/Extract-PDF-documents-for-question-answering-from-a-PDF-1.png",
-      liveLink: "",
-      githubLink: "https://github.com/MuhammadUmerKhan/PDF-Question-and-Answering-System/blob/main/README.md"
+      title: "📝 Chatbot: LLM Chatbots",
+      description: "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
+      imageUrl: "https://lh3.googleusercontent.com/proxy/QbH2x0FxOZUx3snQjXb8AyAvsZxNIYAq4Age2clMqlxGlwH6PJyaeRQjn6K-Vt774FvFJFqjwHaWTPwCW6GHTsJpc6fUdpK6TBOtGPg1O5QiOi7Tio4IbVPV",
+      liveLink: "https://langhain-chatbots.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
     },
     {
       title: "🦠 Pneumonia Classification System 🫁",
@@ -18,6 +18,27 @@ const Projects = () => {
       imageUrl: "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
       liveLink: "https://pneumonia-vs-normal-detection.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md"
+    },
+    {
+      title: "NLP-Powered Recommendation System 📚",
+      description: "Developed a recommendation system that helps users discover relevant learning resources in Earth Systems, Climate Science, and Environmental Engineering. Using advanced natural language processing and collaborative filtering techniques, it analyzes course metadata and user preferences to deliver personalized suggestions. This comprehensive solution integrates multiple recommendation methods for an enhanced learning experience.",
+      imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
+      liveLink: "https://nlp-powered-recommendation-system.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System"
+    },
+    {
+      title: "📝 DocuMind AI: Smart PDF Question Answering System",
+      description: "In today's data-driven world, extracting meaningful insights from documents is crucial for businesses, researchers, and individuals. This project focuses on building an intelligent PDF question-answering system that leverages state-of-the-art language models to provide accurate, context-aware answers from uploaded PDF documents. 📚✨",
+      imageUrl: "https://blog.apify.com/content/images/size/w1200/2023/11/Extract-PDF-documents-for-question-answering-from-a-PDF-1.png",
+      liveLink: "https://langhain-chatbots.streamlit.app/chat_with_your_documents",
+      githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
+    },
+    {
+      title: "Customer Churn Prediction with NLP Insights 📉",
+      description: "A predictive model to identify customers at risk of churning by leveraging insights from customer feedback and interactions. Using NLP techniques, this project analyzes sentiment and extracts key themes to enhance predictive accuracy and provide actionable insights for reducing churn rates. Deployed with Streamlit for easy access to predictions and insights.",
+      imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WZdoYPpmiIk1AcPQ1YHWug.png",
+      liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights"
     },
     {
       title: "📝 Multilingual Text Translation & Summarization System",
@@ -34,25 +55,11 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/-AI-Powered-Resume-Parser---Job-Matcher"
     },
     {
-      title: "NLP-Powered Recommendation System 📚",
-      description: "Developed a recommendation system that helps users discover relevant learning resources in Earth Systems, Climate Science, and Environmental Engineering. Using advanced natural language processing and collaborative filtering techniques, it analyzes course metadata and user preferences to deliver personalized suggestions. This comprehensive solution integrates multiple recommendation methods for an enhanced learning experience.",
-      imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
-      liveLink: "https://nlp-powered-recommendation-system.streamlit.app/",
-      githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System"
-    },
-    {
       title: "🌱 Plant Disease Detection System 🌿",
       description: "The Plant Disease Detection System is a deep learning-based application designed to identify plant diseases from leaf images. This project aims to empower farmers and gardeners with an accessible, user-friendly tool to diagnose crop health issues quickly and effectively, potentially improving agricultural productivity and reducing losses.",
       imageUrl: "https://miro.medium.com/v2/resize:fit:700/1*CUjbLtX-FeWfT6D06ebziA.jpeg",
       liveLink: "https://plant-leaf-desease-classification.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/Plant-Desease-Classification-Project/blob/main/README.md"
-    },
-    {
-      title: "Customer Churn Prediction with NLP Insights 📉",
-      description: "A predictive model to identify customers at risk of churning by leveraging insights from customer feedback and interactions. Using NLP techniques, this project analyzes sentiment and extracts key themes to enhance predictive accuracy and provide actionable insights for reducing churn rates. Deployed with Streamlit for easy access to predictions and insights.",
-      imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WZdoYPpmiIk1AcPQ1YHWug.png",
-      liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
-      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights"
     },
     {
       title: "ARIMA Time Series Forecasting 📈",
