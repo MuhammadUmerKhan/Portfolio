@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 const Projects = () => {
   const projectData = [
     {
-      title: "📝 Chatbot: LLM Chatbots",
+      title: "📝 Large Language Model Chatbots",
       description: "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
       imageUrl: "https://lh3.googleusercontent.com/proxy/QbH2x0FxOZUx3snQjXb8AyAvsZxNIYAq4Age2clMqlxGlwH6PJyaeRQjn6K-Vt774FvFJFqjwHaWTPwCW6GHTsJpc6fUdpK6TBOtGPg1O5QiOi7Tio4IbVPV",
       liveLink: "https://langhain-chatbots.streamlit.app/",
