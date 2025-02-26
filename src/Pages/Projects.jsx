@@ -6,11 +6,11 @@ import { FaGithub } from "react-icons/fa";
 const Projects = () => {
   const projectData = [
     {
-      title: "📝 Large Language Model Chatbots",
-      description: "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
-      imageUrl: "https://lh3.googleusercontent.com/proxy/QbH2x0FxOZUx3snQjXb8AyAvsZxNIYAq4Age2clMqlxGlwH6PJyaeRQjn6K-Vt774FvFJFqjwHaWTPwCW6GHTsJpc6fUdpK6TBOtGPg1O5QiOi7Tio4IbVPV",
-      liveLink: "https://langhain-chatbots.streamlit.app/",
-      githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
+      title: "🤖 AI-Powered Search Engine with LLMs",
+      description: "The AI-Powered Search Engine is a web-based application that combines Google Search API, web scraping, FAISS vector database, and LLMs to fetch, extract, and summarize real-time search results. This tool is designed to enhance information retrieval by providing structured, AI-generated responses.",
+      imageUrl: "https://media.licdn.com/dms/image/v2/D5612AQEmQPzwyDhgbw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1716132344917?e=2147483647&v=beta&t=vUIJxi_t4HCoQxV8HqEDWm3U7Uzz40Kp4YFCB-C5RuU",
+      liveLink: "https://ai-powered-search-engine-using-llm.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine"
     },
     {
       title: "🦠 Pneumonia Classification System 🫁",
@@ -32,6 +32,13 @@ const Projects = () => {
       imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
       liveLink: "https://nlp-powered-recommendation-system.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System"
+    },
+    {
+      title: "📝 Large Language Model Chatbots",
+      description: "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
+      imageUrl: "https://lh3.googleusercontent.com/proxy/QbH2x0FxOZUx3snQjXb8AyAvsZxNIYAq4Age2clMqlxGlwH6PJyaeRQjn6K-Vt774FvFJFqjwHaWTPwCW6GHTsJpc6fUdpK6TBOtGPg1O5QiOi7Tio4IbVPV",
+      liveLink: "https://langhain-chatbots.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
     },
     {
       title: "📝 DocuMind AI: Smart PDF Question Answering System",
