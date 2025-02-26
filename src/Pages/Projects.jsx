@@ -9,7 +9,7 @@ const Projects = () => {
       title: "🤖 AI-Powered Search Engine with LLMs",
       description: "The AI-Powered Search Engine is a web-based application that combines Google Search API, web scraping, FAISS vector database, and LLMs to fetch, extract, and summarize real-time search results. This tool is designed to enhance information retrieval by providing structured, AI-generated responses.",
       imageUrl: "https://media.licdn.com/dms/image/v2/D5612AQEmQPzwyDhgbw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1716132344917?e=2147483647&v=beta&t=vUIJxi_t4HCoQxV8HqEDWm3U7Uzz40Kp4YFCB-C5RuU",
-      liveLink: "https://ai-powered-search-engine-using-llm.streamlit.app/",
+      liveLink: "https://ai-powered-search-engine-using-llm.streamlit.app/?embed_options=show_toolbar,dark_theme,show_colored_line,show_footer",
       githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine"
     },
     {
