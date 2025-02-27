@@ -44,7 +44,7 @@ const Projects = () => {
       title: "📝 DocuMind AI: Smart PDF Question Answering System",
       description: "In today's data-driven world, extracting meaningful insights from documents is crucial for businesses, researchers, and individuals. This project focuses on building an intelligent PDF question-answering system that leverages state-of-the-art language models to provide accurate, context-aware answers from uploaded PDF documents. 📚✨",
       imageUrl: "https://blog.apify.com/content/images/size/w1200/2023/11/Extract-PDF-documents-for-question-answering-from-a-PDF-1.png",
-      liveLink: "https://langhain-chatbots.streamlit.app/chat_with_your_documents",
+      liveLink: "https://langchain-chatbots.streamlit.app/chat_with_your_documents",
       githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
     },
     {
