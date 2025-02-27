@@ -13,6 +13,13 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine"
     },
     {
+      title: "📝 Large Language Model Chatbots",
+      description: "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
+      imageUrl: "https://news.cornell.edu/sites/default/files/styles/story_thumbnail_xlarge/public/2024-07/robot-1280x720_0.jpg?itok=AF6MakCq",
+      liveLink: "https://langchain-chatbots.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
+    },
+    {
       title: "🦠 Pneumonia Classification System 🫁",
       description: "The Pneumonia Classification System is a deep learning-based application designed to detect pneumonia from chest X-ray images. Leveraging transfer learning with InceptionV3, this project ensures accurate and reliable classification of NORMAL and PNEUMONIA cases. By augmenting data and addressing class imbalance. This tool aims to support healthcare professionals in early disease detection, improving patient outcomes and streamlining diagnostic processes.",
       imageUrl: "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
@@ -32,13 +39,6 @@ const Projects = () => {
       imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
       liveLink: "https://nlp-powered-recommendation-system.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System"
-    },
-    {
-      title: "📝 Large Language Model Chatbots",
-      description: "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
-      imageUrl: "https://lh3.googleusercontent.com/proxy/QbH2x0FxOZUx3snQjXb8AyAvsZxNIYAq4Age2clMqlxGlwH6PJyaeRQjn6K-Vt774FvFJFqjwHaWTPwCW6GHTsJpc6fUdpK6TBOtGPg1O5QiOi7Tio4IbVPV",
-      liveLink: "https://langchain-chatbots.streamlit.app/?embed_options=dark_theme,show_toolbar,show_colored_line,show_footer,show_padding",
-      githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
     },
     {
       title: "📝 DocuMind AI: Smart PDF Question Answering System",
