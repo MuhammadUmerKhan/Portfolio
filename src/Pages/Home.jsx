@@ -38,7 +38,6 @@ const Home = () => {
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ delay: 0.6, type: "spring", stiffness: 260, damping: 20 }}
         className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-8 sm:mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10"
       >
         <img
