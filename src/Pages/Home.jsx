@@ -41,7 +41,8 @@ const Home = () => {
         className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-8 sm:mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10"
       >
         <img
-          src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/porfolio.jpg"
+          src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
+          // https://github.com/MuhammadUmerKhan/MuhammadUmerKhan/blob/main/assests/pic/pic2.png
           alt="Muhammad Umer Khan"
           className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"
         />
