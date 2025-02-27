@@ -4,14 +4,13 @@ import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
   const skills = [
-    { name: "Machine Learning 🤖", percentage: 80 },
-    { name: "Deep Learning 🖧", percentage: 75 },
-    { name: "Natural Language Processing (NLP) 🗣️", percentage: 85 },
-    { name: "Computer Vision 📸", percentage: 70 },
-    // { name: "Tiny Object Detection 🛰️", percentage: 65 },
-    // { name: "Time Series Forecasting ⏳", percentage: 70 },
-    { name: "Generative AI 🧠", percentage: 60 },
-    // { name: "Recommendation Systems 🎯", percentage: 75 },
+    { name: "Machine and Deep Learning 🤖", percentage: 85 },
+    { name: "Natural Language Processing (NLP) 🗣️", percentage: 90 },
+    { name: "Computer Vision 📸", percentage: 75 },
+    { name: "Generative AI (LLMs) 🧠", percentage: 85 },
+    { name: "Retrieval-Augmented Generation (RAG) 🔍", percentage: 80 },
+    { name: "Prompt Engineering 🎭", percentage: 75 },
+    { name: "MLOps & Model Deployment 🚀", percentage: 50 },
   ];
 
 
@@ -19,11 +18,7 @@ const Skills = () => {
     { title: "Deep Learning Specialization", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Deep%20Learning%20Specialization.png" },
     { title: "Natural Language Specialization", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/NLP%20specialization.png" },
     { title: "IBM Machine Learning", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/ML%20Certificate.png" },
-    // { title: "Foundation of Python Challenge", issuer: "Microsoft", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Foundation%20of%20Python%20Challenge.png" },
-    // { title: "Excel Certificate", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Excel.png" },
-    // { title: "Database and SQL", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Database%20and%20SQL.png" },
-    // { title: "Exploratory Data Analysis For Machine Learning", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/EDA-with-Python.png" },
-    // { title: "Python", issuer: "Kaggle", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Python-kaggle.png" },
+    { title: "Prompt Engineering for LLMs", issuer: "DeepLearning.AI", image: "https://your-image-url.com/prompt-engineering.png" },
     { title: "Data Science Internship Certificate", issuer: "Digital Empowerment Pakistan", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Internship%20Certificate.png" },
     
   ];
@@ -152,27 +147,14 @@ const Skills = () => {
                           { name: "SQL", emoji: "🗄️" },
                           { name: "TensorFlow", emoji: "🧠" },
                           { name: "PyTorch", emoji: "🔥" },
-                          { name: "Scikit-learn", emoji: "⚙️" },
                           { name: "Hugging Face", emoji: "🤗" },
                           { name: "LangChain", emoji: "🔗" },
-                          // { name: "Statistical Analysis", emoji: "📐" },
-                          // { name: "Data Visualization", emoji: "📉" },
-                          { name: "Feature Engineering", emoji: "🏗️" },
-                          { name: "Power BI", emoji: "📊" },
-                          // { name: "Matplotlib", emoji: "📈" },
-                          // { name: "Seaborn", emoji: "🌊" },
-                          // { name: "Pandas", emoji: "🐼" },
-                          // { name: "NumPy", emoji: "🔢" },
+                          { name: "FastAPI", emoji: "⚡" },
+                          { name: "Docker", emoji: "🐳" },
                           { name: "AWS", emoji: "☁️" },
-                          // { name: "Google Colab", emoji: "🚀" },
-                          // { name: "Hugging Face Spaces", emoji: "🏡" },
+                          { name: "Power BI", emoji: "📊" },
+                          { name: "Feature Engineering", emoji: "🏗️" },
                           { name: "Streamlit", emoji: "🌐" },
-                          // { name: "SBERT", emoji: "🏆" },
-                          // { name: "SpaCy", emoji: "📚" },
-                          // { name: "NLTK", emoji: "🗣️" },
-                          // { name: "FAISS", emoji: "🔍" },
-                          // { name: "BART", emoji: "📝" },
-                          { name: "Transformers", emoji: "🤖" },
                         ].map((skill, index) => (
                           <motion.div
                             key={index}
