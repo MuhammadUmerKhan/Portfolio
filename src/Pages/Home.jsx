@@ -42,7 +42,6 @@ const Home = () => {
       >
         <img
           src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
-          // https://github.com/MuhammadUmerKhan/MuhammadUmerKhan/blob/main/assests/pic/pic2.png
           alt="Muhammad Umer Khan"
           className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"
         />
