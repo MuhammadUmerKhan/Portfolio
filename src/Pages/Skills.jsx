@@ -18,7 +18,8 @@ const Skills = () => {
     { title: "Deep Learning Specialization", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Deep%20Learning%20Specialization.png" },
     { title: "Natural Language Specialization", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/NLP%20specialization.png" },
     { title: "IBM Machine Learning", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/ML%20Certificate.png" },
-    { title: "Prompt Engineering for LLMs", issuer: "DeepLearning.AI", image: "https://your-image-url.com/prompt-engineering.png" },
+    { title: "Prompt Engineering for LLMs", issuer: "DeepLearning.AI", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Prompt%20Engineering.png" },
+    // https://github.com/MuhammadUmerKhan/Portfolio/blob/main/imgs/Prompt%20Engineering.png
     { title: "Data Science Internship Certificate", issuer: "Digital Empowerment Pakistan", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Internship%20Certificate.png" },
     
   ];
