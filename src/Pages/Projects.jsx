@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: "🍽️ DineMate - AI-Powered Food Ordering & Management System 🤖",
       description: "DineMate is an AI-powered food ordering and management system designed for restaurants, cafes, and food delivery businesses. It features a conversational chatbot for customers, a real-time kitchen management system for staff, and an admin panel for menu and order control. The system ensures a seamless ordering experience, efficient kitchen operations, and automated order tracking.",
-      imageUrl: "https://www.streebo.com/blog/wp-content/uploads/2020/02/restaurant-chatbot-thumbnail.jpg",
+      imageUrl: "https://raw.githubusercontent.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot/main/img/logo.jpeg",
       liveLink: "https://dine-mate-food-delivery-chatbot.streamlit.app/?embed_options=dark_theme",
       githubLink: "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot"
     },
