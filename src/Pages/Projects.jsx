@@ -6,38 +6,45 @@ import { FaGithub } from "react-icons/fa";
 const Projects = () => {
   const projectData = [
     {
+      title: "🍽️ DineMate - AI-Powered Food Ordering & Management System 🤖",
+      description: "DineMate is an AI-powered food ordering and management system designed for restaurants, cafes, and food delivery businesses. It features a conversational chatbot for customers, a real-time kitchen management system for staff, and an admin panel for menu and order control. The system ensures a seamless ordering experience, efficient kitchen operations, and automated order tracking.",
+      imageUrl: "https://www.streebo.com/blog/wp-content/uploads/2020/02/restaurant-chatbot-thumbnail.jpg",
+      liveLink: "https://dine-mate-food-delivery-chatbot.streamlit.app/?embed_options=dark_theme",
+      githubLink: "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot"
+    },
+    {
       title: "🤖 AI-Powered Search Engine with LLMs",
       description: "The AI-Powered Search Engine is a web-based application that combines Google Search API, web scraping, FAISS vector database, and LLMs to fetch, extract, and summarize real-time search results. This tool is designed to enhance information retrieval by providing structured, AI-generated responses.",
       imageUrl: "https://media.licdn.com/dms/image/v2/D5612AQEmQPzwyDhgbw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1716132344917?e=2147483647&v=beta&t=vUIJxi_t4HCoQxV8HqEDWm3U7Uzz40Kp4YFCB-C5RuU",
       liveLink: "https://ai-powered-search-engine-using-llm.streamlit.app/?embed_options=show_toolbar,dark_theme,show_colored_line,show_footer",
-      githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine"
+      githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine/?embed_options=dark_theme"
     },
     {
       title: "📝 Large Language Model Chatbots",
       description: "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
       imageUrl: "https://news.cornell.edu/sites/default/files/styles/story_thumbnail_xlarge/public/2024-07/robot-1280x720_0.jpg?itok=AF6MakCq",
-      liveLink: "https://langchain-chatbots.streamlit.app/",
+      liveLink: "https://langchain-chatbots.streamlit.app/?embed_options=dark_theme",
       githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots"
     },
     {
       title: "🦠 Pneumonia Classification System 🫁",
       description: "The Pneumonia Classification System is a deep learning-based application designed to detect pneumonia from chest X-ray images. Leveraging transfer learning with InceptionV3, this project ensures accurate and reliable classification of NORMAL and PNEUMONIA cases. By augmenting data and addressing class imbalance. This tool aims to support healthcare professionals in early disease detection, improving patient outcomes and streamlining diagnostic processes.",
       imageUrl: "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
-      liveLink: "https://pneumonia-vs-normal-detection.streamlit.app/",
+      liveLink: "https://pneumonia-vs-normal-detection.streamlit.app/?embed_options=dark_theme",
       githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md"
     },
     {
       title: "💼 AI Powered Resume Parser 💼",
       description: "This project is an AI-driven Resume Parsing and Job Matching System that leverages Natural Language Processing (NLP), Machine Learning, and LLMs to evaluate candidate suitability for job roles. It extracts, cleans, and processes resume text using advanced text preprocessing techniques, computes semantic similarity between resumes and job descriptions using SBERT embeddings & Cosine Similarity, and now provides AI-powered resume feedback and job fit analysis through an interactive chatbot. 🚀",
       imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*itALTnsKMBIE8mq5rzXzFg.jpeg",
-      liveLink: "https://ai-powered-resume-parser.streamlit.app/",
+      liveLink: "https://ai-powered-resume-parser.streamlit.app/?embed_options=dark_theme",
       githubLink: "https://github.com/MuhammadUmerKhan/-AI-Powered-Resume-Parser---Job-Matcher"
     },
     {
       title: "NLP-Powered Recommendation System 📚",
       description: "Developed a recommendation system that helps users discover relevant learning resources in Earth Systems, Climate Science, and Environmental Engineering. Using advanced natural language processing and collaborative filtering techniques, it analyzes course metadata and user preferences to deliver personalized suggestions. This comprehensive solution integrates multiple recommendation methods for an enhanced learning experience.",
       imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
-      liveLink: "https://nlp-powered-recommendation-system.streamlit.app/",
+      liveLink: "https://nlp-powered-recommendation-system.streamlit.app/?embed_options=dark_theme",
       githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System"
     },
     {
