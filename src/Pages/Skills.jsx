@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -13,7 +13,6 @@ const Skills = () => {
     { name: "MLOps & Model Deployment 🚀", percentage: 50 },
   ];
 
-
   const certificates = [
     { title: "Deep Learning Specialization", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Deep%20Learning%20Specialization.png" },
     { title: "Natural Language Specialization", issuer: "Coursera", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/NLP%20specialization.png" },
@@ -21,13 +20,29 @@ const Skills = () => {
     { title: "Data Science Internship Certificate", issuer: "Digital Empowerment Pakistan", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Internship%20Certificate.png" },
     { title: "Introduction to AWS Sagemaker", issuer: "simplilearn", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/intro%20to%20samgemaker.png" },
     { title: "Prompt Engineering for LLMs", issuer: "DeepLearning.AI", image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Prompt%20Engineering.png" },
-    
   ];
 
   const skillsControls = useAnimation();
   const certificatesControls = useAnimation();
   const [skillsRef, skillsInView] = useInView({ threshold: 0.2, triggerOnce: false, initialInView: true });
   const [certificatesRef, certificatesInView] = useInView({ threshold: 0.2, triggerOnce: false });
+  
+  // Image loading state
+  const [imagesLoaded, setImagesLoaded] = useState({});
+
+  useEffect(() => {
+    // Preload certificate images
+    certificates.forEach((certificate, index) => {
+      const img = new Image();
+      img.src = certificate.image;
+      img.onload = () => {
+        setImagesLoaded(prev => ({
+          ...prev,
+          [index]: true
+        }));
+      };
+    });
+  }, []);
 
   useEffect(() => {
     if (skillsInView) {
@@ -102,7 +117,7 @@ const Skills = () => {
             initial="visible"
             animate={skillsControls}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5" // backdrop-blur-md
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5"
           >
             <div className="space-y-4">
               {skills.map((skill, index) => (
@@ -130,51 +145,51 @@ const Skills = () => {
 
           {/* Technical Skills section */}
           <motion.div
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: false, amount: 0.3 }}
-                      variants={containerVariants}
-                      className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5"
-                    >
-                      <h2 className="text-4xl font-extrabold mb-6 flex items-center justify-center">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
-                          Technical Skills
-                        </span>
-                        <span className="ml-2">⚒</span>
-                      </h2>
-                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        {[
-                          { name: "Python", emoji: "🐍" },
-                          { name: "SQL", emoji: "🗄️" },
-                          { name: "TensorFlow", emoji: "🧠" },
-                          { name: "PyTorch", emoji: "🔥" },
-                          { name: "Hugging Face", emoji: "🤗" },
-                          { name: "LangChain", emoji: "🔗" },
-                          { name: "FastAPI", emoji: "⚡" },
-                          { name: "Docker", emoji: "🐳" },
-                          { name: "AWS", emoji: "☁️" },
-                          { name: "Power BI", emoji: "📊" },
-                          { name: "Feature Engineering", emoji: "🏗️" },
-                          { name: "Streamlit", emoji: "🌐" },
-                        ].map((skill, index) => (
-                          <motion.div
-                            key={index}
-                            variants={itemVariants}
-                            className="bg-gray-700 bg-opacity-50 p-4 rounded-lg shadow-md flex items-center space-x-2"
-                          >
-                            <span className="text-2xl">{skill.emoji}</span>
-                            <span className="text-gray-300">{skill.name}</span>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </motion.div>
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={containerVariants}
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5"
+          >
+            <h2 className="text-4xl font-extrabold mb-6 flex items-center justify-center">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
+                Technical Skills
+              </span>
+              <span className="ml-2">⚒</span>
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                { name: "Python", emoji: "🐍" },
+                { name: "SQL", emoji: "🗄️" },
+                { name: "TensorFlow", emoji: "🧠" },
+                { name: "PyTorch", emoji: "🔥" },
+                { name: "Hugging Face", emoji: "🤗" },
+                { name: "LangChain", emoji: "🔗" },
+                { name: "FastAPI", emoji: "⚡" },
+                { name: "Docker", emoji: "🐳" },
+                { name: "AWS", emoji: "☁️" },
+                { name: "Power BI", emoji: "📊" },
+                { name: "Feature Engineering", emoji: "🏗️" },
+                { name: "Streamlit", emoji: "🌐" },
+              ].map((skill, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="bg-gray-700 bg-opacity-50 p-4 rounded-lg shadow-md flex items-center space-x-2"
+                >
+                  <span className="text-2xl">{skill.emoji}</span>
+                  <span className="text-gray-300">{skill.name}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
 
           {/* Certificates section */}
           <motion.div
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-10 " // backdrop-blur-md
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-10"
           >
             <h2 className="text-4xl font-extrabold mb-6 flex items-center justify-center">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
@@ -183,17 +198,27 @@ const Skills = () => {
               <span className="ml-2">🏅</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
-              <div 
-              // className="bg-gray-700 p-4 rounded-lg shadow-lg w-full"
-              >
+              <div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
                   {certificates.map((certificate, index) => (
-                    <img
-                      key={index}
-                      src={certificate.image}
-                      alt={`Certificate ${index + 1}`}
-                      className="w-full h-auto rounded-lg object-cover"
-                    />
+                    <div key={index} className="relative">
+                      {!imagesLoaded[index] && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 rounded-lg">
+                          <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+                      )}
+                      <img
+                        src={certificate.image || "/placeholder.svg"}
+                        alt={`Certificate ${index + 1}`}
+                        className={`w-full h-auto rounded-lg object-cover transition-opacity duration-300 ${imagesLoaded[index] ? 'opacity-100' : 'opacity-0'}`}
+                        onLoad={() => {
+                          setImagesLoaded(prev => ({
+                            ...prev,
+                            [index]: true
+                          }));
+                        }}
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
@@ -202,12 +227,11 @@ const Skills = () => {
 
           {/* Inspirational Quote */}
           <motion.div
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: false, amount: 0.3 }}
-                      variants={containerVariants}
-                    //   className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl backdrop-blur-md"
-                    >
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={containerVariants}
+          >
             <div className="text-center my-8">
               <p className="text-xl italic text-gray-400">
                 "The best of people are those that bring the most benefit to the rest of mankind." - Prophet Muhammad (ﷺ)

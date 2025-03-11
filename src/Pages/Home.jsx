@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Home = () => {
+  const [profileImageLoaded, setProfileImageLoaded] = useState(false);
+  
+  // Preload profile image
+  useEffect(() => {
+    const img = new Image();
+    img.src = "https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png";
+    img.onload = () => setProfileImageLoaded(true);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -38,12 +47,18 @@ const Home = () => {
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-8 sm:mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10"
+        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-8 sm:mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10 relative"
       >
+        {!profileImageLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-700 rounded-full">
+            <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
         <img
           src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
           alt="Muhammad Umer Khan"
-          className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-110"
+          className={`w-full h-full object-cover transition-all duration-500 transform hover:scale-110 ${profileImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={() => setProfileImageLoaded(true)}
         />
       </motion.div>
 
@@ -56,7 +71,6 @@ const Home = () => {
         <Link
           to="/projects"
           className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-3 px-8 rounded-full text-lg font-semibold shadow-lg hover:shadow-indigo-500/50 transition-all duration-300 bg-opacity-70 backdrop-blur-sm"
-
         >
           View My Projects 🖥️
         </Link>
