@@ -32,7 +32,7 @@ const Home = () => {
         transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
         className="text-xl text-gray-300 mb-12 text-center max-w-2xl z-10"
       >
-        <span className="font-semibold text-white">Aspiring AI Engineer passionate about creating intelligent solutions and transforming data into innovation 🤖🚀.</span>
+        <span className="font-semibold text-white">Aspiring AI Engineer driven by a passion for building intelligent solutions and turning data into impactful innovations 🤖🚀.</span>
       </motion.p>
 
       <motion.div
