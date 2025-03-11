@@ -55,12 +55,12 @@ const About = () => {
               <div>
                 <h2 className="text-3xl font-semibold mb-4 text-left">🧑 Profile</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
-                    Hello! I am Muhammad Umer Khan, an aspiring <strong>AI Engineer</strong> driven by a passion for building intelligent systems that transform raw data into actionable insights. Currently pursuing a <strong>B.Sc. in Computer Science</strong>, I am actively working on real-world AI projects, gaining hands-on experience in cutting-edge technologies.
+                    Hi, I'm Muhammad Umer Khan, an aspiring <strong>AI Engineer</strong> with a passion for developing intelligent systems that transform data into meaningful insights. Currently pursuing a <strong>B.Sc. in Computer Science</strong>, I specialize in building end-to-end AI solutions that bridge the gap between research and real-world applications.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
-                    My expertise spans <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing (NLP)</strong>. Proficient in <strong>Python</strong>, <strong>SQL</strong>, and <strong>state-of-the-art AI frameworks</strong>, I am committed to solving complex challenges with innovative and scalable AI solutions.
+                    My expertise includes <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing (NLP)</strong>. With proficiency in <strong>Python</strong>, <strong>SQL</strong>, and advanced AI frameworks, I am dedicated to designing scalable, efficient, and impactful AI-driven solutions.
                 </p>
-            </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
