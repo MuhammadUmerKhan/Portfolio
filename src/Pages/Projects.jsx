@@ -35,13 +35,12 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots",
     },
     {
-      title: "🦠 Pneumonia Classification System 🫁",
+      title: "Customer Churn Prediction with NLP Insights 📉",
       description:
-        "The Pneumonia Classification System is a deep learning-based application designed to detect pneumonia from chest X-ray images. Leveraging transfer learning with InceptionV3, this project ensures accurate and reliable classification of NORMAL and PNEUMONIA cases. By augmenting data and addressing class imbalance. This tool aims to support healthcare professionals in early disease detection, improving patient outcomes and streamlining diagnostic processes.",
-      imageUrl:
-        "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
-      liveLink: "https://pneumonia-vs-normal-detection.streamlit.app/?embed_options=dark_theme",
-      githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md",
+        "A predictive model to identify customers at risk of churning by leveraging insights from customer feedback and interactions. Using NLP techniques, this project analyzes sentiment and extracts key themes to enhance predictive accuracy and provide actionable insights for reducing churn rates. Deployed with Streamlit for easy access to predictions and insights.",
+      imageUrl: "https://www.leadsquared.com/wp-content/uploads/2022/09/Customer-churn.webp",
+      liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights",
     },
     {
       title: "💼 AI Powered Resume Parser 💼",
@@ -55,7 +54,7 @@ const Projects = () => {
       title: "NLP-Powered Recommendation System 📚",
       description:
         "Developed a recommendation system that helps users discover relevant learning resources in Earth Systems, Climate Science, and Environmental Engineering. Using advanced natural language processing and collaborative filtering techniques, it analyzes course metadata and user preferences to deliver personalized suggestions. This comprehensive solution integrates multiple recommendation methods for an enhanced learning experience.",
-      imageUrl: "https://miro.medium.com/v2/resize:fit:1200/1*rTZvrFD258ZZwvGy7nyqDw.jpeg",
+      imageUrl: "https://media.licdn.com/dms/image/v2/C5612AQGsqeQVa4DlbQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520179223676?e=2147483647&v=beta&t=Tb3oIsMnHXMUAP3vYRMSnpTZhLMXPORBbVv-V2ZK7j0",
       liveLink: "https://nlp-powered-recommendation-system.streamlit.app/?embed_options=dark_theme",
       githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System",
     },
@@ -69,12 +68,13 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots",
     },
     {
-      title: "Customer Churn Prediction with NLP Insights 📉",
+      title: "🦠 Pneumonia Classification System 🫁",
       description:
-        "A predictive model to identify customers at risk of churning by leveraging insights from customer feedback and interactions. Using NLP techniques, this project analyzes sentiment and extracts key themes to enhance predictive accuracy and provide actionable insights for reducing churn rates. Deployed with Streamlit for easy access to predictions and insights.",
-      imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WZdoYPpmiIk1AcPQ1YHWug.png",
-      liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
-      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights",
+        "The Pneumonia Classification System is a deep learning-based application designed to detect pneumonia from chest X-ray images. Leveraging transfer learning with InceptionV3, this project ensures accurate and reliable classification of NORMAL and PNEUMONIA cases. By augmenting data and addressing class imbalance. This tool aims to support healthcare professionals in early disease detection, improving patient outcomes and streamlining diagnostic processes.",
+      imageUrl:
+        "https://hospitalhealthcare.com/wp-content/uploads/2022/03/AI-assistance-improved-X-ray-fracture-detection-with-no-increase-in-reading-time.jpg",
+      liveLink: "https://pneumonia-vs-normal-detection.streamlit.app/?embed_options=dark_theme",
+      githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md",
     },
     {
       title: "📝 Multilingual Text Translation & Summarization System",
