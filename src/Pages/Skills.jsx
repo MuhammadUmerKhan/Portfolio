@@ -6,11 +6,11 @@ const Skills = () => {
   const skills = [
     { name: "Machine and Deep Learning 🤖", percentage: 85 },
     { name: "Natural Language Processing (NLP) 🗣️", percentage: 90 },
-    { name: "Computer Vision 📸", percentage: 75 },
-    { name: "Generative AI (LLMs) 🧠", percentage: 85 },
-    { name: "Retrieval-Augmented Generation (RAG) 🔍", percentage: 80 },
-    { name: "Prompt Engineering 🎭", percentage: 75 },
-    { name: "MLOps & Model Deployment 🚀", percentage: 50 },
+    { name: "Generative AI & Large Language Models (LLMs) 🧠", percentage: 85 },
+    { name: "Prompt Engineering & Fine-Tuning 🎭", percentage: 80 },
+    { name: "MLOps & Model Deployment (MLflow, FastAPI, Docker) 🚀", percentage: 75 },
+    { name: "Computer Vision & Image Processing 📸", percentage: 75 },
+    { name: "Cloud Computing & API Development ☁️", percentage: 65 },
   ];
 
   const certificates = [
@@ -159,19 +159,19 @@ const Skills = () => {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                { name: "Python", emoji: "🐍" },
-                { name: "SQL", emoji: "🗄️" },
-                { name: "TensorFlow", emoji: "🧠" },
-                { name: "PyTorch", emoji: "🔥" },
-                { name: "Hugging Face", emoji: "🤗" },
-                { name: "LangChain", emoji: "🔗" },
-                { name: "FastAPI", emoji: "⚡" },
-                { name: "Docker", emoji: "🐳" },
-                { name: "AWS", emoji: "☁️" },
-                { name: "Power BI", emoji: "📊" },
-                { name: "Feature Engineering", emoji: "🏗️" },
-                { name: "Streamlit", emoji: "🌐" },
-              ].map((skill, index) => (
+                  { name: "Python", emoji: "🐍" },
+                  { name: "SQL", emoji: "🗄️" },
+                  { name: "TensorFlow", emoji: "🧠" },
+                  { name: "PyTorch", emoji: "🔥" },
+                  { name: "Hugging Face", emoji: "🤗" },
+                  { name: "LangChain", emoji: "🔗" },
+                  { name: "FastAPI", emoji: "⚡" },
+                  { name: "Docker", emoji: "🐳" },
+                  { name: "AWS", emoji: "☁️" },
+                  { name: "Power BI", emoji: "📊" },
+                  { name: "Feature Engineering", emoji: "🏗️" },
+                  { name: "Streamlit", emoji: "🌐" },
+                ].map((skill, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
