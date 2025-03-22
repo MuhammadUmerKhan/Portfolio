@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa"
 const Projects = () => {
   const projectData = [
     {
-      title: "🍽️ DineMate - AI-Powered Food Ordering & Management System 🤖",
+      title: "🍽️ DineMate: AI-Driven Conversational Agent for Smart Food Ordering 🤖",
       description:
         "DineMate is an AI-powered food ordering and management system designed for restaurants, cafes, and food delivery businesses. It features a conversational chatbot for customers, a real-time kitchen management system for staff, and an admin panel for menu and order control. The system ensures a seamless ordering experience, efficient kitchen operations, and automated order tracking.",
       imageUrl:
@@ -16,7 +16,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot",
     },
     {
-      title: "🤖 AI-Powered Search Engine with LLMs",
+      title: "🤖 AI-Powered Semantic Search Engine with LLMs & Vector Databases",
       description:
         "The AI-Powered Search Engine is a web-based application that combines Google Search API, web scraping, FAISS vector database, and LLMs to fetch, extract, and summarize real-time search results. This tool is designed to enhance information retrieval by providing structured, AI-generated responses.",
       imageUrl:
@@ -26,7 +26,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine/?embed_options=dark_theme",
     },
     {
-      title: "📝 Large Language Model Chatbots",
+      title: "📝 LLM-Driven Intelligent Virtual Assistants",
       description:
         "AI-powered chatbots using LangChain: Basic Chatbot, Context-Aware Chatbot, and Chat with Your Document Chatbot. The Basic Chatbot enables general conversations with an LLM, the Context-Aware Chatbot enhances interactions by retaining and utilizing conversation history for more relevant responses, and the Chat with Your Document Chatbot allows users to upload documents and ask questions, providing precise answers based on document content. 🚀",
       imageUrl:
@@ -35,7 +35,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots",
     },
     {
-      title: "Customer Churn Prediction with NLP Insights 📉",
+      title: "MLOps-Driven Customer Churn Prediction with LLM Insights 📉",
       description:
         "A predictive model to identify customers at risk of churning by leveraging insights from customer feedback and interactions. Using NLP techniques, this project analyzes sentiment and extracts key themes to enhance predictive accuracy and provide actionable insights for reducing churn rates. Deployed with Streamlit for easy access to predictions and insights.",
       imageUrl: "https://www.leadsquared.com/wp-content/uploads/2022/09/Customer-churn.webp",
@@ -43,7 +43,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights",
     },
     {
-      title: "💼 AI Powered Resume Parser 💼",
+      title: "💼 AI-Powered Resume Parsing & Job Matching System 💼",
       description:
         "This project is an AI-driven Resume Parsing and Job Matching System that leverages Natural Language Processing (NLP), Machine Learning, and LLMs to evaluate candidate suitability for job roles. It extracts, cleans, and processes resume text using advanced text preprocessing techniques, computes semantic similarity between resumes and job descriptions using SBERT embeddings & Cosine Similarity, and now provides AI-powered resume feedback and job fit analysis through an interactive chatbot. 🚀",
       imageUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*itALTnsKMBIE8mq5rzXzFg.jpeg",
@@ -51,7 +51,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/-AI-Powered-Resume-Parser---Job-Matcher",
     },
     {
-      title: "NLP-Powered Recommendation System 📚",
+      title: "Scalable AI-Powered Recommendation Engines 📚",
       description:
         "Developed a recommendation system that helps users discover relevant learning resources in Earth Systems, Climate Science, and Environmental Engineering. Using advanced natural language processing and collaborative filtering techniques, it analyzes course metadata and user preferences to deliver personalized suggestions. This comprehensive solution integrates multiple recommendation methods for an enhanced learning experience.",
       imageUrl: "https://media.licdn.com/dms/image/v2/C5612AQGsqeQVa4DlbQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1520179223676?e=2147483647&v=beta&t=Tb3oIsMnHXMUAP3vYRMSnpTZhLMXPORBbVv-V2ZK7j0",
@@ -59,7 +59,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/NLP-Powered-Recommendation-System",
     },
     {
-      title: "📝 DocuMind AI: Smart PDF Question Answering System",
+      title: "📝 DocuMind AI: Intelligent PDF Question-Answering System",
       description:
         "In today's data-driven world, extracting meaningful insights from documents is crucial for businesses, researchers, and individuals. This project focuses on building an intelligent PDF question-answering system that leverages state-of-the-art language models to provide accurate, context-aware answers from uploaded PDF documents. 📚✨",
       imageUrl:
@@ -68,7 +68,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots",
     },
     {
-      title: "🦠 Pneumonia Classification System 🫁",
+      title: "🦠 Deep Learning-Based Pneumonia Detection from Chest X-Rays 🫁",
       description:
         "The Pneumonia Classification System is a deep learning-based application designed to detect pneumonia from chest X-ray images. Leveraging transfer learning with InceptionV3, this project ensures accurate and reliable classification of NORMAL and PNEUMONIA cases. By augmenting data and addressing class imbalance. This tool aims to support healthcare professionals in early disease detection, improving patient outcomes and streamlining diagnostic processes.",
       imageUrl:
@@ -77,7 +77,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/Medial-Pneumonia-Classification/blob/main/README.md",
     },
     {
-      title: "📝 Multilingual Text Translation & Summarization System",
+      title: "📝 NLP-Driven Multilingual Text Translation & Summarization System",
       description:
         "In today's interconnected world, seamless communication across languages is crucial. This project provides a Multilingual Text Translation & Summarization System that allows users to translate text between multiple languages and summarize content efficiently.",
       imageUrl: "https://618media.com/wp-content/uploads/2024/02/claude-ai-s-language-translation-capabilities.webp",
@@ -85,7 +85,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/Multilingual-Text-Translation---Summarization-System/tree/main",
     },
     {
-      title: "🌱 Plant Disease Detection System 🌿",
+      title: "🌱 AI-Powered Plant Disease Diagnosis & Classification System 🌿",
       description:
         "The Plant Disease Detection System is a deep learning-based application designed to identify plant diseases from leaf images. This project aims to empower farmers and gardeners with an accessible, user-friendly tool to diagnose crop health issues quickly and effectively, potentially improving agricultural productivity and reducing losses.",
       imageUrl: "https://miro.medium.com/v2/resize:fit:700/1*CUjbLtX-FeWfT6D06ebziA.jpeg",
@@ -93,7 +93,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/Plant-Desease-Classification-Project/blob/main/README.md",
     },
     {
-      title: "ARIMA Time Series Forecasting 📈",
+      title: "Time Series Forecasting with ARIMA for Trend Analysis 📈",
       description:
         "This project leverages the power of Streamlit to create an interactive web application for time series analysis. Users can easily upload their data, visualize trends, test for stationarity, and fit ARIMA models. The app offers valuable insights into time series data and facilitates accurate forecasting, making it a powerful tool.",
       imageUrl: "https://dataaspirant.com/wp-content/uploads/2023/09/1-14.png",
@@ -101,7 +101,7 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/Yahoo-Stock",
     },
     {
-      title: "Loan Approval Prediction System 💳",
+      title: "AI-Driven Loan Approval Prediction System 💳",
       description:
         "The Loan Approval Prediction System is an end-to-end machine learning project that predicts the approval status of loan applications. This project highlights expertise in data preprocessing, exploratory data analysis (EDA), feature engineering, and model building with an Artificial Neural Network (ANN). It includes an interactive Streamlit application that enables users to input loan details and receive real-time predictions.",
       imageUrl: "https://lendingplate.com/blog/wp-content/uploads/2023/08/Instant-Loan-Approval.png",
