@@ -86,6 +86,23 @@ const Projects = () => {
       liveLink: "https://yahoo-stock-arima-time-series-forecasting.streamlit.app/",
       githubLink: "https://github.com/MuhammadUmerKhan/Yahoo-Stock",
     },
+    {
+      title: "🌍 NLP-Powered Multilingual Text Translation & Summarization",
+      description:
+        "An AI-driven NLP system that enables seamless multilingual translation and text summarization. Built using advanced language models, it allows users to translate text across multiple languages and generate concise summaries efficiently. Ideal for researchers, businesses, and global communication.",
+      imageUrl: "https://618media.com/wp-content/uploads/2024/02/claude-ai-s-language-translation-capabilities.webp",
+      liveLink: "",
+      githubLink: "https://github.com/MuhammadUmerKhan/Multilingual-Text-Translation---Summarization-System/tree/main",
+    },    
+    {
+      title: "💳 AI-Driven Loan Approval Prediction System",
+      description:
+        "An end-to-end machine learning system that predicts loan approval status based on applicant data. This project features advanced data preprocessing, exploratory data analysis (EDA), feature engineering, and an Artificial Neural Network (ANN) for accurate predictions. Deployed as an interactive Streamlit application for real-time decision-making.",
+      imageUrl: "https://lendingplate.com/blog/wp-content/uploads/2023/08/Instant-Loan-Approval.png",
+      liveLink: "https://customer-loan-approval.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Loan-Approval-KAGGLE-COMPETITION",
+    },
+    
   ]
 
   const [showMore, setShowMore] = useState(false)
