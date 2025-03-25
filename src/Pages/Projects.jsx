@@ -15,6 +15,13 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot",
     },
     {
+      "title": "🤖 SupportGenie: AI-Powered Customer Assistance & Insights",
+      "description": "An AI-driven customer support system that leverages LLMs, FAISS vector search, and sentiment analysis to provide instant, multilingual customer assistance. Includes a chatbot, analytics dashboard, and feedback-based learning for continuous improvement.",
+      "imageUrl": "https://www.addevice.io/storage/ckeditor/uploads/images/64d0d72b8dcde_the.role.of.chatbots.and.humans.in.customer.support.1.png",
+      "liveLink": "https://ai-powered-customer-support-and-analytics-system.streamlit.app/?embed_options=dark_theme",
+      "githubLink": "https://github.com/MuhammadUmerKhan/SupportGenie-AI-Powered-Customer-Assistance-Insights"
+    },    
+    {
       title: "🤖 AI-Powered Semantic Search Engine with LLMs & Vector Databases",
       description:
         "A smart search engine leveraging FAISS, Google Search API, and Llama 3.3-70B (via Groq API) for AI-powered semantic search. It retrieves, processes, and summarizes real-time information, delivering structured and insightful responses.",
