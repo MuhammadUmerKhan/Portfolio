@@ -11,7 +11,7 @@ const Projects = () => {
       description:
         "An AI-driven food ordering assistant that automates restaurant operations with a chatbot for customers, real-time order tracking, and a business analytics dashboard. Powered by Qwen-7B, LangChain, and MySQL, it streamlines order management, enhances efficiency, and optimizes decision-making.",
       imageUrl: "https://raw.githubusercontent.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot/main/img/app_logo.jpeg",
-      liveLink: "https://dine-mate-food-delivery-chatbot.streamlit.app/?embed_options=dark_theme",
+      liveLink: "https://dinemate-ai-powered-conversational-ai-agent-for-food-ordering.streamlit.app/?embed_options=dark_theme",
       githubLink: "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot",
     },
     {
