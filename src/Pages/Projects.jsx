@@ -7,13 +7,13 @@ import { FaGithub } from "react-icons/fa"
 const Projects = () => {
   const projectData = [
     {
-      title: "🍽️ DineMate: AI-Powered Conversational Agent for Smart Food Ordering 🤖",
-      description:
-        "An AI-driven food ordering assistant that automates restaurant operations with a chatbot for customers, real-time order tracking, and a business analytics dashboard. Powered by Qwen-7B, LangChain, and MySQL, it streamlines order management, enhances efficiency, and optimizes decision-making.",
-      imageUrl: "https://raw.githubusercontent.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot/main/img/app_logo.jpeg",
-      liveLink: "https://dinemate-ai-powered-conversational-ai-agent-for-food-ordering.streamlit.app/?embed_options=dark_theme",
-      githubLink: "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot",
-    },
+      "title": "🍽️ DineMate: AI-Powered Conversational Agent for Smart Food Ordering 🎙️🤖",
+      "description": 
+        "An AI-driven food ordering assistant with chatbot and voice-based ordering. Uses Whisper ASR for Speech-to-Text, Torch TTS for AI responses, and integrates Qwen-2.5-32B, LangChain, LangGraph, and MySQL for seamless order management and analytics.",
+      "imageUrl": "https://raw.githubusercontent.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot/main/img/app_logo.jpeg",
+      "liveLink": "https://dinemate-ai-powered-conversational-ai-agent-for-food-ordering.streamlit.app/?embed_options=dark_theme",
+      "githubLink": "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot"
+    },    
     {
       "title": "🤖 SupportGenie: AI-Powered Customer Assistance & Insights",
       "description": "An AI-driven customer support system that leverages LLMs, FAISS vector search, and sentiment analysis to provide instant, multilingual customer assistance. Includes a chatbot, analytics dashboard, and feedback-based learning for continuous improvement.",
