@@ -140,7 +140,7 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen p-8 pt-16 flex flex-col items-center"
+      className="min-h-screen p-8 pt-10 flex flex-col items-center"
     >
       <motion.h1
         initial={{ y: -50, opacity: 0 }}
@@ -220,13 +220,14 @@ const Projects = () => {
       {projectData.length > 2 && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-5">
           <motion.button
-            onClick={toggleShowMore}
-            className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-2 px-5 rounded-full shadow-md font-semibold"
-            whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {showMore ? "Show Less" : "Show More"} 📜
+                onClick={toggleShowMore}
+                className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-lg"
+                whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(59, 130, 246, 0.6)" }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {showMore ? "Show Less" : "Show More"} 📜
           </motion.button>
+
         </motion.div>
       )}
     </motion.div>

@@ -98,12 +98,12 @@ const Skills = () => {
   return (
     <div className="min-h-screen bg-transparent flex flex-col">
       <div className="flex-grow">
-        <div className="max-w-8xl mx-auto text-gray-300 relative p-8 pt-16">
+        <div className="max-w-8xl mx-auto text-gray-300 relative p-8 pt-10 pl-20">
           <motion.h1
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl font-extrabold text-center mb-5 flex items-center justify-center"
+            className="text-6xl font-extrabold text-center mb-5 flex items-center justify-center"
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
               Skills

@@ -45,23 +45,23 @@ const Home = () => {
       </motion.p>
 
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl mb-8 sm:mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10 relative"
-      >
-        {!profileImageLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-700 rounded-full">
-            <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        )}
-        <img
-          src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
-          alt="Muhammad Umer Khan"
-          className={`w-full h-full object-cover transition-all duration-500 transform hover:scale-110 ${profileImageLoaded ? 'opacity-100' : 'opacity-0'}`}
-          onLoad={() => setProfileImageLoaded(true)}
-        />
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full overflow-hidden shadow-2xl mb-8 sm:mb-12 ring-4 ring-purple-500 ring-opacity-50 z-10 relative"
+        >
+          {!profileImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-700 rounded-full">
+              <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
+          <img
+            src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
+            alt="Muhammad Umer Khan"
+            className={`w-full h-full object-cover transition-all duration-500 transform hover:scale-110 ${profileImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+            onLoad={() => setProfileImageLoaded(true)}
+          />
       </motion.div>
-
+      
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -86,7 +86,7 @@ const Home = () => {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.8, type: "spring" }}
-        className="flex justify-center space-x-4 sm:space-x-8 mt-8 sm:mt-12 z-10"
+        className="flex justify-center space-x-4 sm:space-x-8 mt-8 sm:mt-8 z-10"
       >
         {[
           { icon: FaLinkedin, href: "https://www.linkedin.com/in/muhammad-umer-khan-61729b260/", color: "text-blue-400",},
@@ -103,7 +103,7 @@ const Home = () => {
             whileHover={{ scale: 1.2, rotate: 5 }}
             whileTap={{ scale: 0.9 }}
           >
-            <social.icon size={36} />
+            <social.icon size={35} />
           </motion.a>
         ))}
       </motion.div>
