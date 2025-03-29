@@ -18,7 +18,7 @@ const Contact = () => {
           transition={{ delay: 0.2 }}
           className="text-6xl font-extrabold text-center mb-12 flex items-center justify-center"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
             Contact Me
           </span>
           <span className="ml-2">📬</span>
@@ -38,7 +38,7 @@ const Contact = () => {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FaMapMarkerAlt className="text-blue-400 text-2xl mr-4" />
-              <p className="text-lg text-gray-300">Karachi, Pakistan 🌍</p>
+              <p className="text-lg text-gray-300">Karachi, Pakistan</p>
             </motion.div>
             <motion.div 
               className="flex items-center"
@@ -46,7 +46,7 @@ const Contact = () => {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FaPhoneAlt className="text-blue-400 text-2xl mr-4" />
-              <p className="text-lg text-gray-300">+92 3432187868 📱</p>
+              <p className="text-lg text-gray-300">+92 3432187868</p>
             </motion.div>
             <motion.div 
               className="flex items-center"
@@ -54,7 +54,7 @@ const Contact = () => {
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <FaEnvelope className="text-blue-400 text-2xl mr-4" />
-              <p className="text-lg text-gray-300">muhammadumerk546@gmail.com ✉️</p>
+              <p className="text-lg text-gray-300">muhammadumerk546@gmail.com</p>
             </motion.div>
           </div>
         </motion.div>
@@ -69,7 +69,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/muhammad-umer-khan-61729b260/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-3 px-8 rounded-full shadow-lg flex items-center text-lg font-semibold"
+            className="bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500 text-white py-3 px-8 rounded-full shadow-lg flex items-center text-lg font-semibold"
             whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
             whileTap={{ scale: 0.95 }}
           >

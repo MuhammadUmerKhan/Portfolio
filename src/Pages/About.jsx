@@ -30,7 +30,7 @@ const About = () => {
             transition={{ delay: 0.2 }}
             className="text-6xl font-extrabold text-center mb-5 flex items-center justify-center"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
               About Me
             </span>
             <span className="ml-2">🎓</span>
@@ -48,22 +48,23 @@ const About = () => {
               <motion.img
                 src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
                 alt="Muhammad Umer Khan"
-                className="w-48 h-48 rounded-full object-cover shadow-lg mb-4 md:mb-0 md:mr-8 ring-4 ring-purple-500 ring-opacity-50"
+                className="w-48 h-48 rounded-full object-cover shadow-lg mb-4 md:mb-0 md:mr-8 ring-4 ring-cyan-500 ring-opacity-50"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300, damping: 10 }}
               />
               <div>
-                <h2 className="text-3xl font-semibold mb-4 text-left">🧑 Profile</h2>
+              <h2 className="text-3xl font-semibold mb-4 text-left text-white">🧑 Profile</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
-                    Hi, I'm Muhammad Umer Khan, an aspiring <strong>AI Engineer</strong> with a passion for developing intelligent systems that transform data into meaningful insights. Currently pursuing a <strong>B.Sc. in Computer Science</strong>, I specialize in building end-to-end AI solutions that bridge the gap between research and real-world applications.
+                    Hi, I'm <span className="font-semibold text-gray-200">Muhammad Umer Khan</span>, an aspiring <span className="font-semibold text-gray-200">AI Engineer</span> with a passion for developing intelligent systems that transform data into meaningful insights. Currently pursuing a <span className="font-semibold text-gray-200">B.Sc. in Computer Science</span>, I specialize in building end-to-end AI solutions that bridge the gap between research and real-world applications.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed mb-4 text-left">
-                    My expertise includes <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, and <strong>Natural Language Processing (NLP)</strong>. With proficiency in <strong>Python</strong>, <strong>SQL</strong>, and advanced AI frameworks, I am dedicated to designing scalable, efficient, and impactful AI-driven solutions.
+                    My expertise includes <span className="font-semibold text-gray-200">Machine Learning</span>, <span className="font-semibold text-gray-200">Deep Learning</span>, and <span className="font-semibold text-gray-200">Natural Language Processing (NLP)</span>. With proficiency in <span className="font-semibold text-gray-200">Python</span>, <span className="font-semibold text-gray-200">SQL</span>, and advanced AI frameworks, I am dedicated to designing scalable, efficient, and impactful AI-driven solutions.
                 </p>
+                                
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { 
                   title: "🗣️ Languages", 
@@ -93,7 +94,7 @@ const About = () => {
                   <p className="text-gray-300">{item.content}</p>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Education section */}
@@ -102,9 +103,17 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
-            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 " // backdrop-blur-md
+            className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 relative"
           >
-            <h2 className="text-3xl font-semibold mb-6 text-purple-400">🎓 Education</h2>
+            {/* Updated Heading */}
+            <h2 className="text-4xl font-extrabold mb-8 flex items-center justify-center relative z-10 shadow-lg">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+                Education
+              </span>
+              <span className="ml-2">🎓</span>
+            </h2>
+
+            {/* Education Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
@@ -125,7 +134,7 @@ const About = () => {
                   variants={itemVariants}
                   className="bg-gray-700 bg-opacity-50 p-6 rounded-lg shadow-md"
                 >
-                  <h3 className="text-xl font-semibold text-blue-400">{edu.degree}</h3>
+                  <h3 className="text-xl font-semibold text-cyan-600">{edu.degree}</h3>
                   <p className="text-gray-300">{edu.year}</p>
                   <p className="text-gray-300">{edu.institution}</p>
                   <p className="text-gray-300">Grade: {edu.grade}</p>
@@ -133,21 +142,19 @@ const About = () => {
               ))}
             </div>
           </motion.div>
-          {/* Inspirational Quote */}
-          <motion.div
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: false, amount: 0.3 }}
-                                variants={containerVariants}
-                              //   className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl backdrop-blur-md"
-                              >
-                      <div className="text-center my-8">
-                        <p className="text-xl italic text-gray-400">
-                        "He who has no vision of eternity has no hold on time." - Ibn al-Arabi
-                        </p>
-                        
-                      </div>
-          </motion.div>
+
+                    {/* Inspirational Quote */}
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
+                variants={containerVariants}
+                className="bg-gray-900 bg-opacity-40 p-6 rounded-lg shadow-md border-l-4 border-cyan-600"
+              >
+              <p className="text-lg italic text-gray-400 text-center">
+                    "He who has no vision of eternity has no hold on time." – Ibn al-Arabi
+              </p>
+            </motion.div>
           <br /><br />
           {/* Get In Touch section */}
           <motion.div
@@ -160,12 +167,12 @@ const About = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <motion.a
                 href="https://drive.google.com/uc?export=download&id=1FCPfo9m-211RUvAodOXiOcFuKjZlUNjO"
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white py-3 px-6 rounded-full shadow-lg flex items-center justify-center"
+                className="w-full sm:w-auto bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500 text-white py-3 px-6 rounded-full shadow-lg flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 variants={itemVariants}
               >
-                <FaDownload className="mr-2" /> Resume 📄
+                <FaDownload className="mr-2" /> Resume 
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/muhammad-umer-khan-61729b260/"

@@ -146,9 +146,11 @@ const Projects = () => {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="text-6xl font-extrabold text-center mb-4 flex items-center justify-center"
+        className="text-6xl font-extrabold text-center mb-8 flex items-center justify-center"
       >
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">My Projects</span>
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+        My Projects
+      </span>
         <span className="ml-2">🛠️</span>
       </motion.h1>
 
@@ -221,7 +223,7 @@ const Projects = () => {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-5">
           <motion.button
                 onClick={toggleShowMore}
-                className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 text-white text-lg font-bold py-3 px-6 rounded-full shadow-lg"
+                className="bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500 text-white text-lg font-bold py-3 px-6 rounded-full shadow-lg"
                 whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(59, 130, 246, 0.6)" }}
                 whileTap={{ scale: 0.95 }}
               >
