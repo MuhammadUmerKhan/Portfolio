@@ -25,7 +25,7 @@ const Projects = () => {
       "title": "🤖 AI-Powered Semantic Search Engine with LLMs & Vector Databases",
       "description": "A smart AI search engine using FAISS, Google Search API, and Llama 3.3-70B (via Groq API) for powerful semantic search. Retrieves, processes, and summarizes real-time data to deliver precise and insightful search results.",
       "imageUrl": "https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/https://builtin.com/sites/www.builtin.com/files/2024-06/AI%20search%20engine.jpg",
-      "liveLink": "https://ai-powered-search-engine-using-llm.streamlit.app/?embed_options=show_toolbar,dark_theme,show_colored_line,show_footer",
+      "liveLink": "https://ai-powered-search-engine-with-llms.streamlit.app/?embed_options=show_toolbar,dark_theme,show_colored_line,show_footer",
       "githubLink": "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine"
     },
     {
