@@ -4,13 +4,13 @@ import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
   const skills = [
-    { name: "Machine and Deep Learning 🤖", percentage: 85 },
+    { name: "Machine and Deep Learning 🤖", percentage: 90 },
+    { name: "Generative/Agentic AI & Large Language Models (LLMs) 🧠", percentage: 92 },
     { name: "Natural Language Processing (NLP) 🗣️", percentage: 90 },
-    { name: "Generative AI & Large Language Models (LLMs) 🧠", percentage: 85 },
     { name: "Prompt Engineering & Fine-Tuning 🎭", percentage: 80 },
-    { name: "MLOps & Model Deployment (MLflow, FastAPI, Docker) 🚀", percentage: 75 },
-    { name: "Computer Vision & Image Processing 📸", percentage: 75 },
-    { name: "Cloud Computing & API Development ☁️", percentage: 65 },
+    { name: "MLOps & Model Deployment (MLflow, FastAPI, Docker) 🚀", percentage: 85 },
+    { name: "Computer Vision & Image Processing 📸", percentage: 80 },
+    { name: "Cloud Computing & API Development ☁️", percentage: 75 },
   ];
 
   const certificates = [
