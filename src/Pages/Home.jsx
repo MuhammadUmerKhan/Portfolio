@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const TypingAnimation = () => {
-  const texts = ["Generative AI ", "AI/ML Engineer ", "Computer Vision "];
+  const texts = ["Generative/Agentic AI ", "AI/ML Engineer ", "Computer Vision "];
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
