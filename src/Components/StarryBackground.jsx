@@ -112,8 +112,8 @@ const StarryBackground = () => {
 
     // Initialize
     resizeCanvas();
-    const backgroundStars = createStars(150, 'background'); // More stars in background
-    const foregroundStars = createStars(50, 'foreground'); // Fewer, brighter stars in foreground
+    const backgroundStars = createStars(300, 'background'); // More stars in background
+    const foregroundStars = createStars(100, 'foreground'); // Fewer, brighter stars in foreground
 
     // Mouse move handler
     const handleMouseMove = (e) => {
