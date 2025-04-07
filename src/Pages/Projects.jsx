@@ -15,6 +15,14 @@ const Projects = () => {
       "githubLink": "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot"
     },    
     {
+      title: "⚖️ LexiAgent: AI-Powered Autonomous Legal Document Agent",
+      description:
+        "An enterprise-ready autonomous AI agent designed to analyze legal documents with precision. Built using LLMs (Qwen & LLaMA 4 Scout), and custom tools for clause extraction, classification, risk detection, summarization, and natural language querying. Perfect for legal teams, law firms, and compliance.",
+      imageUrl: "https://1719204.fs1.hubspotusercontent-na1.net/hubfs/1719204/RJY%20Socials_Legal%20Doc_FB.jpg",
+      liveLink: "https://lexiagent-ai-powered-autonomous-legal-document-analyst.streamlit.app/?embed_options=dark_theme",
+      githubLink: "https://github.com/MuhammadUmerKhan/LexiAgent-AI-Powered-Autonomous-Legal-Document-Analyst"
+    },    
+    {
       "title": "🤖 SupportGenie: AI-Powered Customer Assistance & Insights",
       "description": "An AI-driven customer support system that leverages LLMs, FAISS vector search, and sentiment analysis to provide instant, multilingual customer assistance. Includes a chatbot, analytics dashboard, and feedback-based learning for continuous improvement.",
       "imageUrl": "https://www.addevice.io/storage/ckeditor/uploads/images/64d0d72b8dcde_the.role.of.chatbots.and.humans.in.customer.support.1.png",
