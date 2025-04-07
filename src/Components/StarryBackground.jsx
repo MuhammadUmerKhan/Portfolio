@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const StarryBackground = () => {
+const CosmicParticleBackground = () => {
   const canvasRef = useRef(null);
   const mousePosition = useRef({ x: 0, y: 0 });
 
@@ -15,112 +15,119 @@ const StarryBackground = () => {
       canvas.height = window.innerHeight;
     };
 
-    // Create stars with layers (background and foreground)
-    const createStars = (count, layer) => {
-      const stars = [];
-      for (let i = 0; i < count; i++) {
-        stars.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          radius: layer === 'foreground' ? Math.random() * 2 + 1 : Math.random() * 1 + 0.5, // Larger for foreground
-          speed: layer === 'foreground' ? Math.random() * 0.8 + 0.2 : Math.random() * 0.4, // Faster for foreground
-          angle: Math.random() * Math.PI * 2,
-          hue: Math.random() * 360, // For color variation
-          trailLength: layer === 'foreground' ? Math.random() * 10 + 5 : Math.random() * 5, // Longer trails for foreground
-        });
-      }
-      return stars;
-    };
-
-    // Draw stars with glow and trails
-    const drawStars = (stars, layer) => {
-      ctx.save();
-      if (layer === 'background') {
-        ctx.globalAlpha = 0.3; // Fainter for background
-      } else {
-        ctx.globalAlpha = 0.7; // Brighter for foreground
+    // Particle class for enhanced cosmic effect
+    class Particle {
+      constructor(layer) {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = layer === 'foreground' ? Math.random() * 2 + 1 : Math.random() * 1 + 0.5;
+        this.speedX = (Math.random() - 0.5) * (layer === 'foreground' ? 0.8 : 0.4);
+        this.speedY = (Math.random() - 0.5) * (layer === 'foreground' ? 0.8 : 0.4);
+        this.hue = 180 + Math.random() * 60; // Teal to blue range (180-240)
+        this.pulseSpeed = Math.random() * 0.02 + 0.01; // Pulsing effect
+        this.pulseOffset = Math.random() * Math.PI * 2;
       }
 
-      stars.forEach((star) => {
-        // Draw trail
-        ctx.beginPath();
-        ctx.moveTo(star.x, star.y);
-        ctx.lineTo(star.x - Math.cos(star.angle) * star.trailLength, star.y - Math.sin(star.angle) * star.trailLength);
-        ctx.strokeStyle = `hsla(${star.hue}, 70%, 50%, 0.5)`;
-        ctx.lineWidth = star.radius / 2;
-        ctx.stroke();
+      update(time) {
+        this.x += this.speedX;
+        this.y += this.speedY;
 
-        // Draw star with glow
+        // Bounce off edges
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+
+        // Mouse interaction
+        const dx = mousePosition.current.x - this.x;
+        const dy = mousePosition.current.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < 120) {
+          const angle = Math.atan2(dy, dx);
+          this.speedX += Math.cos(angle) * 0.2;
+          this.speedY += Math.sin(angle) * 0.2;
+        }
+      }
+
+      draw(time) {
+        const pulse = Math.sin(time * this.pulseSpeed + this.pulseOffset) * 0.5 + 0.5;
+        const radius = this.radius * (0.8 + pulse * 0.4); // Pulsing size
+
+        // Draw glowing particle
         ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `hsla(${star.hue}, 70%, 50%, 0.8)`;
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = `hsla(${star.hue}, 70%, 50%, 0.5)`;
+        ctx.arc(this.x, this.y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${this.hue}, 80%, 60%, 0.9)`;
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = `hsla(${this.hue}, 80%, 60%, 0.6)`;
         ctx.fill();
-      });
+      }
+    }
 
-      ctx.restore();
+    // Create particles
+    const createParticles = (count, layer) => {
+      const particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle(layer));
+      }
+      return particles;
     };
 
-    // Animate stars with mouse interaction
-    const animateStars = (backgroundStars, foregroundStars) => {
+    // Draw connecting lines between nearby particles
+    const drawConnections = (particles) => {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+          const dx = p1.x - p2.x;
+          const dy = p1.y - p2.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `hsla(${p1.hue}, 70%, 50%, ${1 - distance / 100})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+    };
+
+    // Animate particles
+    const animate = (backgroundParticles, foregroundParticles, time) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update and draw background stars (slower, smaller)
-      backgroundStars.forEach((star) => {
-        star.y += star.speed;
-        star.x += Math.cos(star.angle) * star.speed * 0.5; // Slight horizontal drift
-        if (star.y > canvas.height) star.y = -star.radius;
-        if (star.x > canvas.width) star.x = -star.radius;
-        if (star.x < -star.radius) star.x = canvas.width;
-
-        // Mouse interaction (slight attraction/repulsion)
-        const dx = mousePosition.current.x - star.x;
-        const dy = mousePosition.current.y - star.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 100) {
-          const angleToMouse = Math.atan2(dy, dx);
-          star.x += Math.cos(angleToMouse) * 0.1;
-          star.y += Math.sin(angleToMouse) * 0.1;
-        }
+      // Update and draw background particles
+      backgroundParticles.forEach((particle) => {
+        particle.update(time);
+        ctx.globalAlpha = 0.4; // Fainter for background
+        particle.draw(time);
       });
 
-      // Update and draw foreground stars (faster, larger, with more glow)
-      foregroundStars.forEach((star) => {
-        star.y += star.speed;
-        star.x += Math.cos(star.angle) * star.speed; // More pronounced drift
-        if (star.y > canvas.height) star.y = -star.radius;
-        if (star.x > canvas.width) star.x = -star.radius;
-        if (star.x < -star.radius) star.x = canvas.width;
-
-        // Mouse interaction (stronger effect)
-        const dx = mousePosition.current.x - star.x;
-        const dy = mousePosition.current.y - star.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 150) {
-          const angleToMouse = Math.atan2(dy, dx);
-          star.x += Math.cos(angleToMouse) * 0.3;
-          star.y += Math.sin(angleToMouse) * 0.3;
-        }
+      // Update and draw foreground particles
+      foregroundParticles.forEach((particle) => {
+        particle.update(time);
+        ctx.globalAlpha = 0.9; // Brighter for foreground
+        particle.draw(time);
       });
 
-      drawStars(backgroundStars, 'background');
-      drawStars(foregroundStars, 'foreground');
+      // Draw connections between foreground particles
+      ctx.globalAlpha = 0.3;
+      drawConnections(foregroundParticles);
 
-      animationFrameId = requestAnimationFrame(() => animateStars(backgroundStars, foregroundStars));
+      animationFrameId = requestAnimationFrame(() => animate(backgroundParticles, foregroundParticles, time + 1));
     };
 
     // Initialize
     resizeCanvas();
-    const backgroundStars = createStars(300, 'background'); // More stars in background
-    const foregroundStars = createStars(100, 'foreground'); // Fewer, brighter stars in foreground
+    const backgroundParticles = createParticles(200, 'background'); // More subtle particles
+    const foregroundParticles = createParticles(80, 'foreground'); // Fewer, prominent particles
 
     // Mouse move handler
     const handleMouseMove = (e) => {
       mousePosition.current = { x: e.clientX, y: e.clientY };
     };
 
-    animateStars(backgroundStars, foregroundStars);
+    animate(backgroundParticles, foregroundParticles, 0);
     window.addEventListener('resize', resizeCanvas);
     window.addEventListener('mousemove', handleMouseMove);
 
@@ -136,11 +143,11 @@ const StarryBackground = () => {
       ref={canvasRef}
       className="fixed inset-0 z-0"
       style={{
-        background: 'linear-gradient(to bottom, #000000, #0a0a0a, #0a0a0a)',
+        background: '#000000', // Pure black background
         zIndex: 1,
       }}
     />
   );
 };
 
-export default StarryBackground;
+export default CosmicParticleBackground;
