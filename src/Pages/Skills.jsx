@@ -105,7 +105,7 @@ const Skills = () => {
             transition={{ delay: 0.2 }}
             className="text-6xl font-extrabold text-center mb-5 flex items-center justify-center"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500">
               Skills
             </span>
             <span className="ml-2">💻</span>
@@ -132,7 +132,7 @@ const Skills = () => {
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2.5">
                     <motion.div
-                      className="bg-gradient-to-r from-cyan-500 via-blue-600 to-pink-600 h-2.5 rounded-full"
+                      className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 h-2.5 rounded-full"
                       initial={{ width: 0 }}
                       animate={skillsInView ? { width: `${skill.percentage}%` } : { width: 0 }}
                       transition={{ duration: 1, ease: "easeInOut" }}
@@ -152,26 +152,26 @@ const Skills = () => {
             className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-5"
           >
             <h2 className="text-4xl font-extrabold mb-6 flex items-center justify-center">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500">
                 Technical Skills
               </span>
               <span className="ml-2">⚒</span>
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                  { name: "Python", emoji: "🐍" },
-                  { name: "SQL", emoji: "🗄️" },
-                  { name: "TensorFlow", emoji: "🧠" },
-                  { name: "PyTorch", emoji: "🔥" },
-                  { name: "Hugging Face", emoji: "🤗" },
-                  { name: "LangChain", emoji: "🔗" },
-                  { name: "FastAPI", emoji: "⚡" },
-                  { name: "Docker", emoji: "🐳" },
-                  { name: "AWS", emoji: "☁️" },
-                  { name: "Power BI", emoji: "📊" },
-                  { name: "Feature Engineering", emoji: "🏗️" },
-                  { name: "Streamlit", emoji: "🌐" },
-                ].map((skill, index) => (
+                { name: "Python", emoji: "🐍" },
+                { name: "SQL", emoji: "🗄️" },
+                { name: "TensorFlow", emoji: "🧠" },
+                { name: "PyTorch", emoji: "🔥" },
+                { name: "Hugging Face", emoji: "🤗" },
+                { name: "LangChain", emoji: "🔗" },
+                { name: "FastAPI", emoji: "⚡" },
+                { name: "Docker", emoji: "🐳" },
+                { name: "AWS", emoji: "☁️" },
+                { name: "Power BI", emoji: "📊" },
+                { name: "Feature Engineering", emoji: "🏗️" },
+                { name: "Streamlit", emoji: "🌐" },
+              ].map((skill, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
@@ -192,7 +192,7 @@ const Skills = () => {
             className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-10"
           >
             <h2 className="text-4xl font-extrabold mb-6 flex items-center justify-center">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500">
                 Certificates
               </span>
               <span className="ml-2">🏅</span>
@@ -204,7 +204,7 @@ const Skills = () => {
                     <div key={index} className="relative">
                       {!imagesLoaded[index] && (
                         <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 rounded-lg">
-                          <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                          <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
                         </div>
                       )}
                       <img
@@ -227,15 +227,15 @@ const Skills = () => {
 
           {/* Inspirational Quote */}
           <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }}
-                        variants={containerVariants}
-                        className="bg-gray-900 bg-opacity-40 p-6 rounded-lg shadow-md border-l-4 border-cyan-600"
-                      >
-                      <p className="text-lg italic text-gray-400 text-center">
-                      "The best of people are those that bring the most benefit to the rest of mankind." - Prophet Muhammad (ﷺ)
-                      </p>
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={containerVariants}
+            className="bg-gray-900 bg-opacity-40 p-6 rounded-lg shadow-md border-l-4 border-cyan-400"
+          >
+            <p className="text-lg italic text-gray-400 text-center">
+              "The best of people are those that bring the most benefit to the rest of mankind." - Prophet Muhammad (ﷺ)
+            </p>
           </motion.div>
           
         </div>
