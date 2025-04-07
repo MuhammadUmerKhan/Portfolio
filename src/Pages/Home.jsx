@@ -38,10 +38,10 @@ const TypingAnimation = () => {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.4, duration: 0.8, type: "spring" }}
-      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gray-200 via-white to-gray-400 mt-2 sm:mt-4 mb-4 sm:mb-6 text-center tracking-wide"
+      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 mt-2 sm:mt-4 mb-4 sm:mb-6 text-center tracking-wide"
     >
       {text}
-      <motion.span animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1 }} className="text-gray-300">|</motion.span>
+      <motion.span animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 0.8 }} className="text-cyan-300">|</motion.span>
     </motion.p>
   );
 };
@@ -66,10 +66,19 @@ const Home = () => {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-        className="w-32 sm:w-48 md:w-64 lg:w-80 h-32 sm:h-48 md:h-64 lg:h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-cyan-600 ring-opacity-50 z-10"
+        className="w-32 sm:w-48 md:w-64 lg:w-80 h-32 sm:h-48 md:h-64 lg:h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 ring-opacity-50 z-20"
       >
-        {!profileImageLoaded && <div className="absolute inset-0 flex items-center justify-center bg-gray-700 rounded-full"><div className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div></div>}
-        <img src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png" alt="Muhammad Umer Khan" className={`w-full h-full object-cover transition-all duration-500 transform hover:scale-105 ${profileImageLoaded ? "opacity-100" : "opacity-0"}`} onLoad={() => setProfileImageLoaded(true)} />
+        {!profileImageLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-full">
+            <div className="w-8 h-8 border-4 border-teal-400 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
+        <img
+          src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
+          alt="Muhammad Umer Khan"
+          className={`w-full h-full object-cover transition-all duration-500 transform hover:scale-105 ${profileImageLoaded ? "opacity-100" : "opacity-0"}`}
+          onLoad={() => setProfileImageLoaded(true)}
+        />
       </motion.div>
 
       <div className="flex flex-col items-center md:items-start text-center md:text-left md:ml-6 lg:ml-10 mt-6 md:mt-0">
@@ -77,21 +86,44 @@ const Home = () => {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight"
         >
-          Hi<span className="mx-2">👋</span>, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">Muhammad Umer</span>
+          Hi<span className="mx-2">👋</span>, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500">Muhammad Umer</span>
         </motion.h1>
         <TypingAnimation />
 
         <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8, type: "spring" }} className="flex flex-col sm:flex-row gap-4 z-10 mt-6">
-          <Link to="/projects" className="w-full sm:w-auto bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500 text-white py-3 px-6 sm:px-8 rounded-xl text-lg font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">View My Projects 🖥️</Link>
-          <Link to="/contact" className="w-full sm:w-auto bg-gray-700 text-white py-3 px-6 sm:px-8 rounded-xl text-lg font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300">Get in Touch ✉️</Link>
+        <Link
+            to="/projects"
+            className="w-full sm:w-auto bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-4 px-8 rounded-xl text-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center"
+          >
+            View My Projects 🖥️
+          </Link>
+          <Link
+            to="/contact"
+            className="w-full sm:w-auto bg-gray-800 text-white py-4 px-8 rounded-xl text-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center bg-opacity-80 backdrop-blur-sm"
+          >
+            Get in Touch ✉️
+          </Link>
         </motion.div>
 
-        <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1, duration: 0.8, type: "spring" }} className="flex flex-wrap justify-center md:justify-start space-x-4 sm:space-x-6 mt-6 sm:mt-8 z-10">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.8, type: "spring" }}
+          className="flex flex-wrap justify-center md:justify-start space-x-6 mt-10 z-20"
+        >
           {[FaLinkedin, FaGithub, FaInstagram, FaFacebook].map((Icon, index) => (
-            <motion.a key={index} href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300" whileHover={{ scale: 1.2, rotate: 5 }} whileTap={{ scale: 0.9 }}>
-              <Icon size={24} />
+            <motion.a
+              key={index}
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 transition duration-300"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Icon size={28} />
             </motion.a>
           ))}
         </motion.div>
