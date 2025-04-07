@@ -203,7 +203,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-3 px-6 rounded-full shadow-md font-semibold drop-shadow-lg animate-gradient"
+                    className="bg-gradient-to-r from-teal-500 via-cyan-600 to-blue-600 text-white py-3 px-6 rounded-full shadow-md font-semibold drop-shadow-lg animate-gradient"
                     whileHover={{ 
                       scale: 1.05, 
                       boxShadow: "0 0 20px rgba(34, 211, 238, 0.8)" 
@@ -216,7 +216,7 @@ const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-3 px-6 rounded-full shadow-md font-semibold flex items-center justify-center drop-shadow-lg animate-gradient"
+                    className="bg-gradient-to-r from-teal-500 via-cyan-600 to-blue-600 text-white py-3 px-6 rounded-full shadow-md font-semibold flex items-center justify-center drop-shadow-lg animate-gradient"
                     whileHover={{ 
                       scale: 1.05, 
                       boxShadow: "0 0 20px rgba(34, 211, 238, 0.8)" 
