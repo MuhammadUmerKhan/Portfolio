@@ -130,7 +130,7 @@ const About = () => {
             <h2 className="text-3xl font-semibold mb-6 text-center text-white"><center>📬 Get In Touch</center></h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <motion.a
-                href="https://drive.google.com/uc?export=download&id=1NxWK95r736T-1XgqRCMxxmCBLc8cmxz8"
+                href="https://drive.google.com/uc?export=download&id=1Ya5HcaFbOSW4ZrwgFWFDsujbMbzDIFAJ"
                 className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-4 px-8 rounded-xl text-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(34, 211, 238, 0.8)" }}
                 whileTap={{ scale: 0.95 }}
