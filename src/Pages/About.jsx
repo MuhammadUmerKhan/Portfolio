@@ -30,7 +30,7 @@ const About = () => {
             transition={{ delay: 0.2 }}
             className="text-6xl font-extrabold text-center mb-5 flex items-center justify-center"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500">
               About Me
             </span>
             <span className="ml-2">🎓</span>
@@ -63,41 +63,7 @@ const About = () => {
                                 
               </div>
             </div>
-
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                { 
-                  title: "🗣️ Languages", 
-                  content: "English (Professional), Urdu (Native)" 
-                },
-                // { 
-                //   title: "📊 Visualization Tools", 
-                //   content: "Microsoft Power BI, Matplotlib, Seaborn" 
-                // },
-                // {
-                //   title: "🛠️ Technical Skills",
-                //   content: "Python, SQL, Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, SpaCy, NLTK ..."
-                // },                
-                { 
-                  title: "🌱 Interests", 
-                  content: "Fitness Enthusiast 🏋️‍♂️, Exploring New Technologies 💡" 
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.6 + index * 0.1 }}
-                  className="bg-gray-700 bg-opacity-50 p-6 rounded-lg shadow-md"
-                >
-                  <h3 className="text-2xl font-semibold mb-2 text-purple-400">{item.title}</h3>
-                  <p className="text-gray-300">{item.content}</p>
-                </motion.div>
-              ))}
-            </div> */}
           </motion.div>
-
-          {/* Education section */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -105,15 +71,13 @@ const About = () => {
             variants={containerVariants}
             className="bg-gray-800 bg-opacity-30 p-8 rounded-lg shadow-2xl mb-12 relative"
           >
-            {/* Updated Heading */}
             <h2 className="text-4xl font-extrabold mb-8 flex items-center justify-center relative z-10 shadow-lg">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500">
                 Education
               </span>
               <span className="ml-2">🎓</span>
             </h2>
 
-            {/* Education Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
@@ -134,7 +98,7 @@ const About = () => {
                   variants={itemVariants}
                   className="bg-gray-700 bg-opacity-50 p-6 rounded-lg shadow-md"
                 >
-                  <h3 className="text-xl font-semibold text-cyan-600">{edu.degree}</h3>
+                  <h3 className="text-xl font-semibold text-cyan-400">{edu.degree}</h3>
                   <p className="text-gray-300">{edu.year}</p>
                   <p className="text-gray-300">{edu.institution}</p>
                   <p className="text-gray-300">Grade: {edu.grade}</p>
@@ -149,7 +113,7 @@ const About = () => {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.3 }}
                 variants={containerVariants}
-                className="bg-gray-900 bg-opacity-40 p-6 rounded-lg shadow-md border-l-4 border-cyan-600"
+                className="bg-gray-900 bg-opacity-40 p-6 rounded-lg shadow-md border-l-4 border-cyan-400"
               >
               <p className="text-lg italic text-gray-400 text-center">
                     "He who has no vision of eternity has no hold on time." – Ibn al-Arabi
@@ -163,38 +127,38 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             variants={containerVariants}
           >
-            <h2 className="text-3xl font-semibold mb-6 text-purple-400"><center>📬 Get In Touch</center></h2>
+            <h2 className="text-3xl font-semibold mb-6 text-center text-white"><center>📬 Get In Touch</center></h2>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <motion.a
                 href="https://drive.google.com/uc?export=download&id=1NxWK95r736T-1XgqRCMxxmCBLc8cmxz8"
-                className="w-full sm:w-auto bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500 text-white py-3 px-6 rounded-full shadow-lg flex items-center justify-center"
+                className="w-full sm:w-auto bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-4 px-8 rounded-xl text-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 variants={itemVariants}
               >
-                <FaDownload className="mr-2" /> Resume 
+                <FaDownload className="mr-2 text-white" /> Resume
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/muhammad-umer-khan-61729b260/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-blue-600 text-white py-3 px-6 rounded-full shadow-lg flex items-center justify-center"
+                className="w-full sm:w-auto bg-gray-800 text-white py-4 px-8 rounded-xl text-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center bg-opacity-80 backdrop-blur-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 variants={itemVariants}
               >
-                <FaLinkedin className="mr-2" /> LinkedIn 🔗
+                <FaLinkedin className="mr-2 text-white" /> LinkedIn 🔗
               </motion.a>
               <motion.a
                 href="https://github.com/MuhammadUmerKhan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-gray-700 text-white py-3 px-6 rounded-full shadow-lg flex items-center justify-center"
+                className="w-full sm:w-auto bg-gray-800 text-white py-4 px-8 rounded-xl text-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center bg-opacity-80 backdrop-blur-sm"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 variants={itemVariants}
               >
-                <FaGithub className="mr-2" /> GitHub 🖥️
+                <FaGithub className="mr-2 text-white" /> GitHub 🖥️
               </motion.a>
             </div>
           </motion.div>
