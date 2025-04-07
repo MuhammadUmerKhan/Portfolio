@@ -35,30 +35,47 @@ const Header = () => {
         initial={{ x: -100 }}
         animate={{ x: 0 }}
         transition={{ type: "spring", stiffness: 120, damping: 20 }}
-        className={`fixed left-0 top-1/4 transform -translate-y-1/3 z-50 hidden md:flex flex-col items-center py-4 px-3 transition-all duration-300 ${
-          scrolled ? "bg-black bg-opacity-30 backdrop-blur-md shadow-lg" : "bg-transparent"
+        className={`fixed left-0 top-1/4 transform -translate-y-1/3 z-50 hidden md:flex flex-col items-center py-6 px-4 transition-all duration-300 rounded-r-xl ${
+          scrolled
+            ? "bg-gray-900 bg-opacity-70 backdrop-blur-lg shadow-[0_0_15px_rgba(34,211,238,0.5)]"
+            : "bg-gray-900 bg-opacity-30 backdrop-blur-md"
         }`}
       >
-        <div className="flex flex-col items-center space-y-6">
+        <div className="flex flex-col items-center space-y-8">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path
             return (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-gray-300 transition-all duration-300 ${
-                  isActive ? "opacity-100 text-white" : "opacity-60 hover:opacity-100 hover:text-white"
-                }`}
+                className={`text-gray-300`}
                 title={item.name}
               >
                 <motion.div
-                  initial={isActive ? { scale: 1.2, color: "#ffffff" } : { scale: 1 }}
-                  animate={isActive ? { scale: 1.2, color: "#ffffff" } : { scale: 1 }}
-                  whileHover={{ scale: 1.2, color: "#ffffff" }}
+                  initial={isActive ? { scale: 1.3 } : { scale: 1 }}
+                  animate={isActive ? { scale: 1.3 } : { scale: 1 }}
+                  whileHover={{
+                    scale: 1.3,
+                    rotate: 5,
+                    color: "rgba(34, 211, 238, 1)", // Glow color on hover
+                  }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center justify-center"
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  className="relative flex items-center justify-center"
                 >
-                  <item.icon className="text-3xl" />
+                  <item.icon className="text-3xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+                  {isActive && (
+                    <motion.div
+                      className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-50"
+                      layoutId="activeGlow"
+                    />
+                  )}
+                  {/* Glow effect on hover */}
+                  <motion.div
+                    className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
+                    whileHover={{ opacity: 0.5 }}
+                    transition={{ duration: 0.2 }}
+                  />
                 </motion.div>
               </Link>
             )
@@ -72,14 +89,20 @@ const Header = () => {
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 120, damping: 20 }}
         className={`fixed w-full z-50 md:hidden transition-all duration-300 ${
-          scrolled ? "bg-black bg-opacity-70 backdrop-blur-md shadow-lg" : "bg-transparent"
+          scrolled
+            ? "bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-[0_0_15px_rgba(34,211,238,0.5)]"
+            : "bg-gray-900 bg-opacity-30 backdrop-blur-md"
         }`}
       >
-        <nav className="container mx-auto px-4 py-2">
+        <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Mobile Hamburger Button */}
             <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none p-2">
-              {isOpen ? <RiCloseLine size={28} /> : <RiMenu3Line size={28} />}
+              {isOpen ? (
+                <RiCloseLine size={28} className="text-gradient-to-r from-teal-400 via-cyan-500 to-blue-500" />
+              ) : (
+                <RiMenu3Line size={28} className="text-gradient-to-r from-teal-400 via-cyan-500 to-blue-500" />
+              )}
             </button>
           </div>
 
@@ -91,7 +114,7 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="mt-2 bg-black bg-opacity-90 rounded-lg shadow-lg"
+                className="mt-3 bg-gray-900 bg-opacity-90 rounded-lg shadow-[0_0_20px_rgba(34,211,238,0.3)] backdrop-blur-lg border border-cyan-500 border-opacity-20"
               >
                 {navItems.map((item, index) => {
                   const isActive = location.pathname === item.path
@@ -104,15 +127,30 @@ const Header = () => {
                     >
                       <Link
                         to={item.path}
-                        className={`block py-3 px-4 text-base transition-all duration-300 rounded ${
-                          isActive ? "text-white bg-gray-800" : "text-gray-300 hover:text-white hover:bg-gray-800"
+                        className={`block py-4 px-6 text-base rounded ${
+                          isActive
+                            ? "text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 bg-gray-800 bg-opacity-50"
+                            : "text-gray-300"
                         }`}
                         onClick={() => setIsOpen(false)}
                       >
-                        <div className="flex items-center space-x-2">
-                          <item.icon className="text-xl" />
+                        <motion.div
+                          className="flex items-center space-x-3 relative"
+                          whileHover={{
+                            color: "rgba(34, 211, 238, 1)",
+                            backgroundColor: "rgba(17, 24, 39, 0.3)", // Subtle hover bg
+                          }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <item.icon className="text-xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
                           <span>{item.name}</span>
-                        </div>
+                          {/* Glow effect on hover */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded opacity-0 blur-md"
+                            whileHover={{ opacity: 0.3 }}
+                            transition={{ duration: 0.2 }}
+                          />
+                        </motion.div>
                       </Link>
                     </motion.div>
                   )
@@ -127,4 +165,3 @@ const Header = () => {
 }
 
 export default Header
-
