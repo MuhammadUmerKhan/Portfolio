@@ -147,7 +147,7 @@ const Projects = () => {
         transition={{ delay: 0.2 }}
         className="text-6xl font-extrabold text-center mb-10 flex items-center justify-center"
       >
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500">
         My Projects
       </span>
         <span className="ml-2">🛠️</span>
@@ -167,12 +167,12 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -50 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-800 bg-opacity-30 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105"
+              className="bg-gray-800 bg-opacity-30 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 z-10"
             >
               <div className="relative h-56">
                 {!imagesLoaded[index] && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-gray-700">
-                    <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 rounded-lg">
+                    <div className="w-12 h-12 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
                   </div>
                 )}
                 <img
@@ -195,8 +195,11 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 px-4 rounded-full shadow-md font-semibold"
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)" }}
+                    className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-3 px-6 rounded-full shadow-md font-semibold drop-shadow-lg animate-gradient"
+                    whileHover={{ 
+                      scale: 1.05, 
+                      boxShadow: "0 0 20px rgba(34, 211, 238, 0.8)" 
+                    }}
                     whileTap={{ scale: 0.95 }}
                   >
                     View Live Demo 🚀
@@ -205,11 +208,14 @@ const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 px-4 rounded-full shadow-md font-semibold flex items-center justify-center"
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(147, 51, 234, 0.5)" }}
+                    className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-3 px-6 rounded-full shadow-md font-semibold flex items-center justify-center drop-shadow-lg animate-gradient"
+                    whileHover={{ 
+                      scale: 1.05, 
+                      boxShadow: "0 0 20px rgba(34, 211, 238, 0.8)" 
+                    }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <FaGithub className="mr-2" />
+                    <FaGithub className="mr-2 text-white" />
                     View Efforts
                   </motion.a>
                 </div>
@@ -217,18 +223,17 @@ const Projects = () => {
             </motion.div>
           ))}
         </AnimatePresence>
-      </motion.div>
+        </motion.div>
       {projectData.length > 2 && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-5">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-5 z-10">
           <motion.button
-                onClick={toggleShowMore}
-                className="bg-gradient-to-r from-cyan-600 via-blue-600 to-pink-500 text-white text-lg font-bold py-3 px-6 rounded-full shadow-lg"
-                whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(59, 130, 246, 0.6)" }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {showMore ? "Show Less" : "Show More"} 📜
+            onClick={toggleShowMore}
+            className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white text-lg font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(34, 211, 238, 0.6)" }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {showMore ? "Show Less" : "Show More"} 📜
           </motion.button>
-
         </motion.div>
       )}
     </motion.div>
