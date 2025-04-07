@@ -93,7 +93,7 @@ const Home = () => {
         <TypingAnimation />
 
         <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.8, duration: 0.8, type: "spring" }} className="flex flex-col sm:flex-row gap-4 z-10 mt-6">
-        <Link
+          <Link
             to="/projects"
             className="w-full sm:w-auto bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-4 px-8 rounded-xl text-xl font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center"
           >
@@ -119,11 +119,24 @@ const Home = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 transition duration-300"
-              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="text-gray-300"
+              whileHover={{
+                scale: 1.3,
+                rotate: 5,
+                color: "rgba(34, 211, 238, 1)", // Cyan on hover
+              }}
               whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <Icon size={28} />
+              <div className="relative flex items-center justify-center">
+                <Icon size={28} className="drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+                {/* Glow effect on hover */}
+                <motion.div
+                  className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
+                  whileHover={{ opacity: 0.5 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </div>
             </motion.a>
           ))}
         </motion.div>
