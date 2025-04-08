@@ -9,6 +9,7 @@ import { FaTools } from "react-icons/fa"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [hoveredItem, setHoveredItem] = useState(null) // Track hovered/tapped item
   const location = useLocation()
 
   const navItems = [
@@ -44,38 +45,40 @@ const Header = () => {
         <div className="flex flex-col items-center space-y-8">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path
+            const isHovered = hoveredItem === item.name
             return (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-gray-300`}
+                className="text-gray-300"
                 title={item.name}
               >
                 <motion.div
                   initial={isActive ? { scale: 1.3 } : { scale: 1 }}
                   animate={isActive ? { scale: 1.3 } : { scale: 1 }}
-                  whileHover={{
-                    scale: 1.3,
-                    rotate: 5,
-                    color: "rgba(34, 211, 238, 1)", // Glow color on hover
-                  }}
+                  onHoverStart={() => setHoveredItem(item.name)}
+                  onHoverEnd={() => setHoveredItem(null)}
+                  onTap={() => setHoveredItem(item.name)} // Handle tap on mobile
+                  onTapCancel={() => setHoveredItem(null)} // Reset on tap end
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="relative flex items-center justify-center"
                 >
-                  <item.icon className="text-3xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+                  <item.icon className="text-3xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" style={{ color: isHovered || isActive ? "rgba(34, 211, 238, 1)" : "inherit" }} />
                   {isActive && (
                     <motion.div
                       className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-50"
                       layoutId="activeGlow"
                     />
                   )}
-                  {/* Glow effect on hover */}
-                  <motion.div
-                    className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
-                    whileHover={{ opacity: 0.5 }}
-                    transition={{ duration: 0.2 }}
-                  />
+                  {(isHovered || isActive) && (
+                    <motion.div
+                      className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-50"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 0.5 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  )}
                 </motion.div>
               </Link>
             )
@@ -118,6 +121,7 @@ const Header = () => {
               >
                 {navItems.map((item, index) => {
                   const isActive = location.pathname === item.path
+                  const isHovered = hoveredItem === item.name
                   return (
                     <motion.div
                       key={item.name}
@@ -128,28 +132,32 @@ const Header = () => {
                       <Link
                         to={item.path}
                         className={`block py-4 px-6 text-base rounded ${
-                          isActive
-                            ? "text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 bg-gray-800 bg-opacity-50"
-                            : "text-gray-300"
+                          isActive ? "text-cyan-400 bg-gray-800 bg-opacity-50" : "text-gray-300"
                         }`}
                         onClick={() => setIsOpen(false)}
                       >
                         <motion.div
+                          onHoverStart={() => setHoveredItem(item.name)}
+                          onHoverEnd={() => setHoveredItem(null)}
+                          onTap={() => setHoveredItem(item.name)} // Handle tap on mobile
+                          onTapCancel={() => setHoveredItem(null)} // Reset on tap end
                           className="flex items-center space-x-3 relative"
-                          whileHover={{
-                            color: "rgba(34, 211, 238, 1)",
-                            backgroundColor: "rgba(17, 24, 39, 0.3)", // Subtle hover bg
-                          }}
+                          whileTap={{ scale: 0.95 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <item.icon className="text-xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
-                          <span>{item.name}</span>
-                          {/* Glow effect on hover */}
-                          <motion.div
-                            className="absolute inset-0 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded opacity-0 blur-md"
-                            whileHover={{ opacity: 0.3 }}
-                            transition={{ duration: 0.2 }}
+                          <item.icon
+                            className="text-xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]"
+                            style={{ color: isHovered || isActive ? "rgba(34, 211, 238, 1)" : "inherit" }}
                           />
+                          <span>{item.name}</span>
+                          {(isHovered || isActive) && (
+                            <motion.div
+                              className="absolute inset-0 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded opacity-0 blur-md"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 0.3 }}
+                              transition={{ duration: 0.2 }}
+                            />
+                          )}
                         </motion.div>
                       </Link>
                     </motion.div>
