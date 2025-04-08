@@ -29,6 +29,8 @@ const Skills = () => {
   
   // Image loading state
   const [imagesLoaded, setImagesLoaded] = useState({});
+  // Expanded certificate state
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   useEffect(() => {
     // Preload certificate images
@@ -61,38 +63,22 @@ const Skills = () => {
   }, [certificatesControls, certificatesInView]);
 
   const containerVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      transition: {
-        duration: 0.5,
-      },
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        staggerChildren: 0.1,
-      },
-    },
+    hidden: { opacity: 0, y: 50, transition: { duration: 0.5 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, staggerChildren: 0.1 } },
   };
 
   const itemVariants = {
-    hidden: {
-      opacity: 0,
-      x: -20,
-      transition: {
-        duration: 0.3,
-      },
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.3,
-      },
-    },
+    hidden: { opacity: 0, x: -20, transition: { duration: 0.3 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+  };
+
+  const certificateVariants = {
+    normal: { scale: 1, zIndex: 1 },
+    expanded: { scale: 1.5, zIndex: 50, transition: { duration: 0.3, type: "spring", stiffness: 200, damping: 20 } },
+  };
+
+  const handleCertificateClick = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index); // Toggle expansion
   };
 
   return (
@@ -123,12 +109,8 @@ const Skills = () => {
               {skills.map((skill, index) => (
                 <motion.div key={skill.name} variants={itemVariants}>
                   <div className="flex justify-between mb-1">
-                    <span className="text-base font-medium text-gray-300">
-                      {skill.name}
-                    </span>
-                    <span className="text-sm font-medium text-gray-300">
-                      {skill.percentage}%
-                    </span>
+                    <span className="text-base font-medium text-gray-300">{skill.name}</span>
+                    <span className="text-sm font-medium text-gray-300">{skill.percentage}%</span>
                   </div>
                   <div className="w-full bg-gray-700 rounded-full h-2.5">
                     <motion.div
@@ -197,31 +179,34 @@ const Skills = () => {
               </span>
               <span className="ml-2">🏅</span>
             </h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
-                  {certificates.map((certificate, index) => (
-                    <div key={index} className="relative">
-                      {!imagesLoaded[index] && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 rounded-lg">
-                          <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                      )}
-                      <img
-                        src={certificate.image || "/placeholder.svg"}
-                        alt={`Certificate ${index + 1}`}
-                        className={`w-full h-auto rounded-lg object-cover transition-opacity duration-300 ${imagesLoaded[index] ? 'opacity-100' : 'opacity-0'}`}
-                        onLoad={() => {
-                          setImagesLoaded(prev => ({
-                            ...prev,
-                            [index]: true
-                          }));
-                        }}
-                      />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certificates.map((certificate, index) => (
+                <motion.div
+                  key={index}
+                  className="relative border-2 border-cyan-500 border-opacity-50 rounded-lg overflow-hidden bg-gray-900 bg-opacity-50 cursor-pointer shadow-[0_0_10px_rgba(34,211,238,0.3)]"
+                  variants={certificateVariants}
+                  initial="normal"
+                  animate={expandedIndex === index ? "expanded" : "normal"}
+                  onClick={() => handleCertificateClick(index)}
+                >
+                  {!imagesLoaded[index] && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 rounded-lg">
+                      <div className="w-10 h-10 border-4 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
                     </div>
-                  ))}
-                </div>
-              </div>
+                  )}
+                  <img
+                    src={certificate.image || "/placeholder.svg"}
+                    alt={certificate.title}
+                    className={`w-full h-auto object-cover transition-opacity duration-300 ${imagesLoaded[index] ? 'opacity-100' : 'opacity-0'}`}
+                    onLoad={() => {
+                      setImagesLoaded(prev => ({
+                        ...prev,
+                        [index]: true
+                      }));
+                    }}
+                  />
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
@@ -237,7 +222,6 @@ const Skills = () => {
               "The best of people are those that bring the most benefit to the rest of mankind." - Prophet Muhammad (ﷺ)
             </p>
           </motion.div>
-          
         </div>
       </div>
     </div>
