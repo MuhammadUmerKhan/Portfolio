@@ -22,12 +22,27 @@
   }
 }
 
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px 5px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 20px 10px rgba(59, 130, 246, 0.6); }
+}
+
+@keyframes shine {
+  0% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(34, 211, 238, 0.8), 0 0 25px rgba(34, 211, 238, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.5); }
+}
+
 .animate-fadeIn {
   animation: fadeIn 0.6s ease-in-out forwards;
 }
 
 .animate-slideIn {
   animation: slideIn 0.6s ease-in-out forwards;
+}
+
+.animate-glow {
+  animation: glow 4s ease-in-out infinite;
 }
 
 body, html {
@@ -50,18 +65,21 @@ canvas {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px; /* Slightly wider for better visibility */
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: #0a0a0a; /* Darker black to match cosmic theme */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4b5563;
-  border-radius: 5px;
+  background: linear-gradient(to bottom, #38bdf8, #06b6d4); /* Teal-to-cyan gradient */
+  border-radius: 6px; /* Rounded for sleek look */
+  border: 2px solid #0a0a0a; /* Border to blend with track */
+  animation: shine 2s ease-in-out infinite; /* Shining effect */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+  background: linear-gradient(to bottom, #22d3ee, #0891b2); /* Lighter gradient on hover */
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.8); /* Enhanced glow on hover */
 }
