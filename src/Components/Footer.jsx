@@ -25,7 +25,7 @@ const Footer = () => {
     },
     {
       icon: FaFileAlt,
-      href: "https://drive.google.com/uc?export=download&id=1Ya5HcaFbOSW4ZrwgFWFDsujbMbzDIFAJ",
+      href: "https://drive.google.com/uc?export=download&id=1mZgsy1d_7kVW3LyvVW-m7GDXC1n3xe3v",
       label: "Resume",
       download: true,
     },
