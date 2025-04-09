@@ -60,25 +60,51 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 pt-10 relative overflow-hidden"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24 pt-2 relative overflow-hidden"
     >
       <motion.div
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-        className="w-32 sm:w-48 md:w-64 lg:w-80 h-32 sm:h-48 md:h-64 lg:h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 ring-opacity-50 z-20"
+        className="relative z-20"
       >
-        {!profileImageLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-full">
-            <div className="w-8 h-8 border-4 border-teal-400 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        )}
-        <img
-          src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
-          alt="Muhammad Umer Khan"
-          className={`w-full h-full object-cover transition-all duration-500 transform hover:scale-105 ${profileImageLoaded ? "opacity-100" : "opacity-0"}`}
-          onLoad={() => setProfileImageLoaded(true)}
+        {/* Animated Gradient Ring */}
+        <motion.div
+          className="absolute -inset-4 rounded-full z-0"
+          animate={{
+            background: [
+              "linear-gradient(90deg, rgba(13,148,136,0.15) 0%, rgba(34,211,238,0.15) 100%)",
+              "linear-gradient(180deg, rgba(13,148,136,0.15) 0%, rgba(34,211,238,0.15) 100%)",
+              "linear-gradient(270deg, rgba(13,148,136,0.15) 0%, rgba(34,211,238,0.15) 100%)",
+              "linear-gradient(0deg, rgba(13,148,136,0.15) 0%, rgba(34,211,238,0.15) 100%)",
+            ],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 8,
+            ease: "linear",
+          }}
         />
+
+        {/* Profile Image with Glow */}
+        <div className="relative w-32 sm:w-66 md:w-64 lg:w-80 h-50 sm:h-48 md:h-64 lg:h-80 rounded-full overflow-hidden border-4 border-gray-900 shadow-2xl">
+          <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-70"></div>
+
+          {!profileImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-full z-10">
+              <div className="w-8 h-8 border-4 border-teal-400 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
+
+          <img
+            src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
+            alt="Muhammad Umer Khan"
+            className={`relative z-10 w-full h-full object-cover transition-all duration-500 transform hover:scale-105 ${
+              profileImageLoaded ? "opacity-100" : "opacity-0"
+            }`}
+            onLoad={() => setProfileImageLoaded(true)}
+          />
+        </div>
       </motion.div>
 
       <div className="flex flex-col items-center md:items-start text-center md:text-left md:ml-6 lg:ml-10 mt-6 md:mt-0">
