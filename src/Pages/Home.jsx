@@ -134,38 +134,92 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8, type: "spring" }}
-          className="flex flex-wrap justify-center md:justify-start space-x-6 mt-10 z-20"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1, duration: 0.8, type: "spring" }}
+        className="flex flex-wrap justify-center md:justify-start space-x-6 mt-10 z-20"
+      >
+        {/* LinkedIn */}
+        <motion.a
+          href="https://www.linkedin.com/in/muhammad-umer-khan-61729b260/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300"
+          whileHover={{ scale: 1.3, rotate: 5, color: "rgba(34, 211, 238, 1)" }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
-          {[FaLinkedin, FaGithub, FaInstagram, FaFacebook].map((Icon, index) => (
-            <motion.a
-              key={index}
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-300"
-              whileHover={{
-                scale: 1.3,
-                rotate: 5,
-                color: "rgba(34, 211, 238, 1)", // Cyan on hover
-              }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
-              <div className="relative flex items-center justify-center">
-                <Icon size={28} className="drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
-                {/* Glow effect on hover */}
-                <motion.div
-                  className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
-                  whileHover={{ opacity: 0.5 }}
-                  transition={{ duration: 0.2 }}
-                />
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
+          <div className="relative flex items-center justify-center">
+            <FaLinkedin size={28} className="drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+            <motion.div
+              className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
+              whileHover={{ opacity: 0.5 }}
+              transition={{ duration: 0.2 }}
+            />
+          </div>
+        </motion.a>
+
+        {/* GitHub */}
+        <motion.a
+          href="https://github.com/MuhammadUmerKhan"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300"
+          whileHover={{ scale: 1.3, rotate: 5, color: "rgba(34, 211, 238, 1)" }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        >
+          <div className="relative flex items-center justify-center">
+            <FaGithub size={28} className="drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+            <motion.div
+              className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
+              whileHover={{ opacity: 0.5 }}
+              transition={{ duration: 0.2 }}
+            />
+          </div>
+        </motion.a>
+
+        {/* Instagram */}
+        <motion.a
+          href="https://www.instagram.com/umr.khan.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300"
+          whileHover={{ scale: 1.3, rotate: 5, color: "rgba(34, 211, 238, 1)" }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        >
+          <div className="relative flex items-center justify-center">
+            <FaInstagram size={28} className="drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+            <motion.div
+              className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
+              whileHover={{ opacity: 0.5 }}
+              transition={{ duration: 0.2 }}
+            />
+          </div>
+        </motion.a>
+
+        {/* Facebook */}
+        <motion.a
+          href="https://www.facebook.com/umar.shahid.56211497/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300"
+          whileHover={{ scale: 1.3, rotate: 5, color: "rgba(34, 211, 238, 1)" }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        >
+          <div className="relative flex items-center justify-center">
+            <FaFacebook size={28} className="drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+            <motion.div
+              className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
+              whileHover={{ opacity: 0.5 }}
+              transition={{ duration: 0.2 }}
+            />
+          </div>
+        </motion.a>
+      </motion.div>
+
       </div>
     </motion.div>
   );
