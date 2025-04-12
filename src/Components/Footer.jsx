@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook, FaFileAlt } from "react-icons/fa"
 
@@ -41,9 +43,9 @@ const Footer = () => {
       {/* Subtle Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-teal-400/10 via-cyan-500/10 to-blue-500/10 opacity-50 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto py-6 sm:py-8 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center">
-          <div className="flex justify-center space-x-8 mb-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mb-4 sm:mb-6">
             {socialLinks.map((link, index) => (
               <motion.a
                 key={link.label}
@@ -64,7 +66,7 @@ const Footer = () => {
               >
                 <span className="sr-only">{link.label}</span>
                 <div className="relative flex items-center justify-center">
-                  <link.icon className="h-7 w-7 drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+                  <link.icon className="h-6 w-6 sm:h-7 sm:w-7 drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
                   {/* Glow effect on hover */}
                   <motion.div
                     className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-0"
@@ -76,7 +78,7 @@ const Footer = () => {
             ))}
           </div>
           <motion.div
-            className="text-center text-gray-400 text-sm"
+            className="text-center text-gray-400 text-xs sm:text-sm"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -86,7 +88,7 @@ const Footer = () => {
               <motion.span
                 className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500"
                 animate={{ scale: [1, 1.2, 1] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
+                transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
               >
                 ♥
               </motion.span>

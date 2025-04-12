@@ -29,6 +29,11 @@ const Header = () => {
     return () => document.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location.pathname])
+
   return (
     <>
       {/* Desktop Left Sidebar - Icons in Center */}
@@ -36,23 +41,18 @@ const Header = () => {
         initial={{ x: -100 }}
         animate={{ x: 0 }}
         transition={{ type: "spring", stiffness: 120, damping: 20 }}
-        className={`fixed left-0 top-1/4 transform -translate-y-1/3 z-50 hidden md:flex flex-col items-center py-6 px-4 transition-all duration-300 rounded-r-xl ${
+        className={`fixed left-0 top-1/4 transform -translate-y-1/3 z-50 hidden md:flex flex-col items-center py-6 px-3 lg:px-4 transition-all duration-300 rounded-r-xl ${
           scrolled
             ? "bg-gray-900 bg-opacity-70 backdrop-blur-lg shadow-[0_0_15px_rgba(34,211,238,0.5)]"
             : "bg-gray-900 bg-opacity-30 backdrop-blur-md"
         }`}
       >
-        <div className="flex flex-col items-center space-y-8">
+        <div className="flex flex-col items-center space-y-6 lg:space-y-8">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path
             const isHovered = hoveredItem === item.name
             return (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="text-gray-300"
-                title={item.name}
-              >
+              <Link key={item.name} to={item.path} className="text-gray-300" title={item.name}>
                 <motion.div
                   initial={isActive ? { scale: 1.3 } : { scale: 1 }}
                   animate={isActive ? { scale: 1.3 } : { scale: 1 }}
@@ -64,7 +64,10 @@ const Header = () => {
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   className="relative flex items-center justify-center"
                 >
-                  <item.icon className="text-3xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" style={{ color: isHovered || isActive ? "rgba(34, 211, 238, 1)" : "inherit" }} />
+                  <item.icon
+                    className="text-2xl md:text-2xl lg:text-3xl drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]"
+                    style={{ color: isHovered || isActive ? "rgba(34, 211, 238, 1)" : "inherit" }}
+                  />
                   {isActive && (
                     <motion.div
                       className="absolute -inset-2 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-50"
@@ -99,8 +102,17 @@ const Header = () => {
       >
         <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
+            {/* Mobile Logo/Title */}
+            <div className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 font-bold text-lg">
+              Muhammad Umer
+            </div>
+
             {/* Mobile Hamburger Button */}
-            <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none p-2">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white focus:outline-none p-2 rounded-md hover:bg-gray-800 hover:bg-opacity-50 transition-colors"
+              aria-label="Toggle menu"
+            >
               {isOpen ? (
                 <RiCloseLine size={28} className="text-gradient-to-r from-teal-400 via-cyan-500 to-blue-500" />
               ) : (
@@ -131,7 +143,7 @@ const Header = () => {
                     >
                       <Link
                         to={item.path}
-                        className={`block py-4 px-6 text-base rounded ${
+                        className={`block py-3 px-4 sm:py-4 sm:px-6 text-base rounded ${
                           isActive ? "text-cyan-400 bg-gray-800 bg-opacity-50" : "text-gray-300"
                         }`}
                         onClick={() => setIsOpen(false)}
