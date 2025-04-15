@@ -34,7 +34,7 @@ const Skills = () => {
     },
     {
       title: "Data Science Internship Certificate",
-      issuer: "Digital Empowerment Pakistan",
+      issuer: "Digital Empowerment Network",
       image: "https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/Internship%20Certificate.png",
     },
     {
