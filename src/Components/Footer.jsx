@@ -38,7 +38,7 @@ const Footer = () => {
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-[0_0_20px_rgba(34,211,238,0.3)] border-t border-cyan-500 border-opacity-20 z-10 relative overflow-hidden"
+      className="bg-gray-900 bg-opacity-10 shadow-[0_0_20px_rgba(34,211,238,0.3)] border-t border-cyan-500 border-opacity-5 z-10 relative overflow-hidden"
     >
       {/* Subtle Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-teal-400/10 via-cyan-500/10 to-blue-500/10 opacity-50 pointer-events-none"></div>
