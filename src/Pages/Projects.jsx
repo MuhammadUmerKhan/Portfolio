@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa"
 const Projects = () => {
   const projectData = [
     {
-      title: "🍽️ DineMate: AI-Powered Conversational Agent for Smart Food Ordering 🎙️🤖",
+      title: "🍽️ DineMate: AI-Powered Conversational Agent for Smart Food Ordering 🎙️",
       description:
         "An AI-driven food ordering assistant with chatbot and voice-based ordering. Uses Whisper ASR for Speech-to-Text, Torch TTS for AI responses, and integrates Qwen-2.5-32B, LangChain, LangGraph, and MySQL for seamless order management and analytics.",
       imageUrl:
@@ -26,13 +26,12 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/LexiAgent-AI-Powered-Autonomous-Legal-Document-Analyst",
     },
     {
-      title: "🤖 SupportGenie: AI-Powered Customer Assistance & Insights",
+      title: "📉 MLOps-Driven Customer Churn Prediction with LLM Insights",
       description:
-        "An AI-driven customer support system that leverages LLMs, FAISS vector search, and sentiment analysis to provide instant, multilingual customer assistance. Includes a chatbot, analytics dashboard, and feedback-based learning for continuous improvement.",
-      imageUrl:
-        "https://www.addevice.io/storage/ckeditor/uploads/images/64d0d72b8dcde_the.role.of.chatbots.and.humans.in.customer.support.1.png",
-      liveLink: "https://ai-powered-customer-support-and-analytics-system.streamlit.app/?embed_options=dark_theme",
-      githubLink: "https://github.com/MuhammadUmerKhan/SupportGenie-AI-Powered-Customer-Assistance-Insights",
+        "A predictive AI system that analyzes customer interactions using NLP and sentiment analysis (ChatQrok) to forecast churn risks. Integrated with MLflow for MLOps, FastAPI for real-time predictions, and a web app for actionable insights.",
+      imageUrl: "https://www.leadsquared.com/wp-content/uploads/2022/09/Customer-churn.webp",
+      liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
+      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights",
     },
     {
       title: "🤖 AI-Powered Semantic Search Engine with LLMs & Vector Databases",
@@ -54,12 +53,13 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots",
     },
     {
-      title: "📉 MLOps-Driven Customer Churn Prediction with LLM Insights",
+      title: "🤖 SupportGenie: AI-Powered Customer Assistance & Insights",
       description:
-        "A predictive AI system that analyzes customer interactions using NLP and sentiment analysis (ChatQrok) to forecast churn risks. Integrated with MLflow for MLOps, FastAPI for real-time predictions, and a web app for actionable insights.",
-      imageUrl: "https://www.leadsquared.com/wp-content/uploads/2022/09/Customer-churn.webp",
-      liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
-      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights",
+        "An AI-driven customer support system that leverages LLMs, FAISS vector search, and sentiment analysis to provide instant, multilingual customer assistance. Includes a chatbot, analytics dashboard, and feedback-based learning for continuous improvement.",
+      imageUrl:
+        "https://www.addevice.io/storage/ckeditor/uploads/images/64d0d72b8dcde_the.role.of.chatbots.and.humans.in.customer.support.1.png",
+      liveLink: "https://ai-powered-customer-support-and-analytics-system.streamlit.app/?embed_options=dark_theme",
+      githubLink: "https://github.com/MuhammadUmerKhan/SupportGenie-AI-Powered-Customer-Assistance-Insights",
     },
     {
       title: "💼 AI-Powered Resume Parsing & Job Matching System",
