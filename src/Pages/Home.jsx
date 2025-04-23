@@ -105,7 +105,7 @@ const Home = () => {
         )}
 
         <img
-          src="https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/profile.png"
+          src="https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/profile1.png"
           alt="Muhammad Umer Khan"
           className={`relative z-10 w-full h-full object-cover transition-all duration-500 transform hover:scale-105 ${
             profileImageLoaded ? "opacity-100" : "opacity-0"
