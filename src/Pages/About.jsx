@@ -46,7 +46,7 @@ const About = () => {
           >
             <div className="flex flex-col md:flex-row items-center mb-6 md:mb-8">
               <motion.img
-                src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
+                src="https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/profile.png"
                 alt="Muhammad Umer Khan"
                 className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg mb-4 md:mb-0 md:mr-6 lg:mr-8 ring-4 ring-cyan-500 ring-opacity-50"
                 whileHover={{ scale: 1.05 }}
