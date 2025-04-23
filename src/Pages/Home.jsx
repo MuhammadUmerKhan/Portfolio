@@ -95,24 +95,24 @@ const Home = () => {
         />
 
         {/* Profile Image with Glow */}
-        <div className="relative w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-900 shadow-2xl">
-          <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-70"></div>
+      <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-gray-900 shadow-2xl">
+        <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 rounded-full blur-md opacity-70"></div>
 
-          {!profileImageLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-full z-10">
-              <div className="w-8 h-8 border-4 border-teal-400 border-t-transparent rounded-full animate-spin"></div>
-            </div>
-          )}
+        {!profileImageLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded-full z-10">
+            <div className="w-8 h-8 border-4 border-teal-400 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        )}
 
-          <img
-            src="https://raw.githubusercontent.com/MuhammadUmerKhan/MuhammadUmerKhan/main/assests/pic/pic2.png"
-            alt="Muhammad Umer Khan"
-            className={`relative z-10 w-full h-full object-cover transition-all duration-500 transform hover:scale-105 ${
-              profileImageLoaded ? "opacity-100" : "opacity-0"
-            }`}
-            onLoad={() => setProfileImageLoaded(true)}
-          />
-        </div>
+        <img
+          src="https://raw.githubusercontent.com/MuhammadUmerKhan/Portfolio/main/imgs/profile.png"
+          alt="Muhammad Umer Khan"
+          className={`relative z-10 w-full h-full object-cover transition-all duration-500 transform hover:scale-105 ${
+            profileImageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setProfileImageLoaded(true)}
+        />
+      </div>
       </motion.div>
 
       <div className="flex flex-col items-center md:items-start text-center md:text-left md:ml-6 lg:ml-10">
