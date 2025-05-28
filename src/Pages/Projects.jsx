@@ -17,6 +17,14 @@ const Projects = () => {
       githubLink: "https://github.com/MuhammadUmerKhan/DineMate-Food-Ordering-Chatbot",
     },
     {
+      title: "🩺 Diagnosify – AI-Powered Medical Insight Engine",
+      description:
+        "An AI system that converts complex medical reports into clear, actionable insights. Uses OCR for data extraction, LLMs (Groq + LangChain) for interpretation, and Streamlit for an interactive interface. Features result categorization, plain-language summaries, RAG-based chat, and PDF report generation.",
+      imageUrl: "https://cdn.prod.website-files.com/61d48f722324914c384ef59a/65f8c1ae4a5428edab845cd2_Template%2013.webp",
+      liveLink: "https://smit-hackathon-ai-medical-report-analyzer.streamlit.app/?embed_options=dark_theme",
+      githubLink: "https://github.com/MuhammadUmerKhan/SMIT-Hackathon-AI-Medical-Report-Analyzer"
+    },
+    {
       title: "⚖️ LexiAgent: AI-Powered Autonomous Legal Document Agent",
       description:
         "An enterprise-ready autonomous AI agent designed to analyze legal documents with precision. Built using LLMs (Qwen & LLaMA 4 Scout), and custom tools for clause extraction, classification, risk detection, summarization, and natural language querying. Perfect for legal teams, law firms, and compliance.",
@@ -31,7 +39,7 @@ const Projects = () => {
         "A predictive AI system that analyzes customer interactions using NLP and sentiment analysis (ChatQrok) to forecast churn risks. Integrated with MLflow for MLOps, FastAPI for real-time predictions, and a web app for actionable insights.",
       imageUrl: "https://www.leadsquared.com/wp-content/uploads/2022/09/Customer-churn.webp",
       liveLink: "https://customer-churn-prediction-with-nlp-insights-rlazeungatswsd5e4c.streamlit.app/",
-      githubLink: "https://github.com/MuhammadUmerKhan/Customer-Churn-Prediction-with-NLP-Insights",
+      githubLink: "https://github.com/MuhammadUmerKhan/MLOps-Driven-Customer-Churn-Prediction",
     },
     {
       title: "🤖 AI-Powered Semantic Search Engine with LLMs & Vector Databases",
@@ -41,7 +49,7 @@ const Projects = () => {
         "https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/https://builtin.com/sites/www.builtin.com/files/2024-06/AI%20search%20engine.jpg",
       liveLink:
         "https://ai-powered-search-engine-with-llms.streamlit.app/?embed_options=show_toolbar,dark_theme,show_colored_line,show_footer",
-      githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Search-Engine",
+      githubLink: "https://github.com/MuhammadUmerKhan/AI-Powered-Semantic-Search-Engine-with-LLMs-Vector-Databases",
     },
     {
       title: "📝 LLM-Driven Intelligent Virtual Assistants",
@@ -50,7 +58,7 @@ const Projects = () => {
       imageUrl:
         "https://news.cornell.edu/sites/default/files/styles/story_thumbnail_xlarge/public/2024-07/robot-1280x720_0.jpg?itok=AF6MakCq",
       liveLink: "https://langchain-chatbots.streamlit.app/?embed_options=dark_theme",
-      githubLink: "https://github.com/MuhammadUmerKhan/LangChain-Chatbots",
+      githubLink: "https://github.com/MuhammadUmerKhan/LLM-Driven-Intelligent-Virtual-Assistants",
     },
     {
       title: "🤖 SupportGenie: AI-Powered Customer Assistance & Insights",
